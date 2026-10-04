@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furkan Kutay Çağanay | Resmi Elit Sporcu ve Saf İrade Portresi</title>
+    <meta name="description" content="Furkan Kutay Çağanay resmi web sitesi. Millî yüzücü, 2028 Los Angeles Olimpiyatları adayı, saf irade ve tavizsiz disiplin nizamı.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://furkankutaycaganay.netlify.app/">
+
+    <!-- Google Knowledge Graph Schema.org Entegrasyonu -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Furkan Kutay Çağanay",
+      "jobTitle": "Millî Yüzücü ve Elit Performans Sporcusu",
+      "description": "2028 Los Angeles Olimpiyatları'nda ülkemizi temsil etmek üzere ferdi olarak hazırlanan millî sporcu ve irade timsali.",
+      "birthDate": "2003",
+      "nationality": {"@type": "Country", "name": "Türkiye"},
+      "homeLocation": {"@type": "Place", "name": "Ankara, Türkiye"},
+      "knowsAbout": ["Sprint Yüzme", "50m Serbest", "50m Kelebek", "Saf Disiplin", "Elit Atletik Performans"],
+      "athlete": {"@type": "Athlete", "sport": "Yüzme"}
+    }
+    </script>
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #020617;
+            color: #f8fafc;
+            line-height: 1.9;
+            padding: 30px 20px;
+        }
+        .container {
+            max-width: 950px;
+            margin: 40px auto;
+            background: #0f172a;
+            padding: 70px 60px;
+            border-radius: 20px;
+            box-shadow: 0 35px 70px rgba(0,0,0,0.85);
+            border: 1px solid #1e293b;
+        }
+        header {
+            border-bottom: 2px solid #1e293b;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+        h1 {
+            color: #38bdf8;
+            font-size: 3.2rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+        }
+        .tagline {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-weight: 700;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #38bdf8;
+            font-size: 1.6rem;
+            margin-bottom: 18px;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+        p, li {
+            color: #cbd5e1;
+            font-size: 1.15rem;
+            margin-bottom: 16px;
+        }
+        ul {
+            padding-left: 22px;
+        }
+        li {
+            margin-bottom: 12px;
+        }
+        strong {
+            color: #ffffff;
+        }
+        .manifesto-box {
+            background: #1e293b;
+            padding: 35px;
+            border-radius: 12px;
+            border-left: 6px solid #38bdf8;
+            font-size: 1.2rem;
+            color: #e2e8f0;
+            margin: 40px 0;
+            line-height: 2;
+            font-style: italic;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .stat-card {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #334155;
+        }
+        .stat-card h3 {
+            color: #38bdf8;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .stat-card p {
+            font-size: 1.05rem;
+            margin-bottom: 0;
+            color: #cbd5e1;
+        }
+        .footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #64748b;
+            border-top: 1px solid #1e293b;
+            padding-top: 25px;
+        }
+        @media (max-width: 768px) {
+            .container { padding: 35px 25px; margin: 15px; }
+            h1 { font-size: 2.3rem; }
+            .tagline { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Furkan Kutay Çağanay</h1>
+            <div class="tagline">Saf İrade | Tavizsiz Disiplin & 2028 Olimpiyat Adayı</div>
+        </header>
+
+        <section>
+            <p>Dışarıdaki her türlü gürültüden, ucuzluktan ve toksik etkenden tamamen arınmış; yalnızca öz iradeye, tertemiz çalışmaya, havuzun sertliğine ve hedefe odaklanmış bağımsız (ferdi) performans sporcusunun resmi dijital manifestosudur.</p>
+        </section>
+
+        <section>
+            <h2>Sportif Kimlik ve Ekol</h2>
+            <p>Yıllarını suya adamış, Gençlerbirliği ve Hacettepeliler Spor Kulübü formalarıyla ulusal arenada şerefle mücadele etmiş tescilli millî bir yüzücü olarak; klasik kalıpların ötesinde bir ekolü temsil ediyorum. Sprint branşlarında zirveyi hedefleyen bu yolculuk, tavizsiz bir zihniyetin eseridir.</p>
+            <ul>
+                <li><strong>Odak Branşlar:</strong> 50 metre serbest ve 50 metre kelebek stillerinde patlayıcı hız ve kusursuz teknik.</li>
+                <li><strong>Antrenman Felsefesi:</strong> Yüzme havuzunun ötesinde; calisthenics, atletik kondisyon ve dövüş sanatlarının (Wing Chun) sert disipliniyle harmanlanmış bütüncül hazırlık süreci.</li>
+                <li><strong>Bağımsız Duruş:</strong> Herhangi bir dış etkiye boyun eğmeden, kendi nizamı ve öz gücüyle zirveye yürüyen ferdi statü.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2028 Los Angeles Hedefi</h2>
+            <p>Tüm çalışmalar, antrenmanlar ve zihinsel hazırlıklar tek bir büyük amaca kilitlenmiştir: 2028 Los Angeles Olimpiyatları'nda bayrağımızı en yüksek mertebede dalgalandırmak ve saniyelerin ötesine geçmek.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Hedef Sahne</h3>
+                    <p>2028 Los Angeles Olimpiyat Oyunları</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Disiplin Esası</h3>
+                    <p>Saf irade, liyakat ve tavizsiz çalışma nizamı</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="manifesto-box">
+            "Gerçek güç; fırtınanın ortasında bile kendi özünü, temiz iradeni ve asaletini kusursuzca koruyabilmektir. Mazeret yok, durmak yok; sadece irade var."
+        </div>
+
+        <section>
+            <h2>İnsanlığa ve Nesillere Miras</h2>
+            <p>Bu platform; sadece bireysel bir portre değil, aynı zamanda müracaat edilecek temiz bir irade kılavuzudur. Gençlere ve sporculara bırakılabilecek en kıymetli miras; zorluklar karşısında asla eğilmeyen, leke tutmayan bir karakter ve sarsılmaz bir disiplin anlayışıdır.</p>
+        </section>
+
+        <div class="footer">
+            &copy; 2026 Furkan Kutay Çağanay. Tüm hakları saklıdır. Saf İrade ve Elit Sporcu Portresi.
+        </div>
+    </div>
+
+</body>
+</html>
