@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furkan Kutay Çağanay | Resmi Millî Sporcu ve Elit Yüzücü Portresi</title>
+    <meta name="description" content="Furkan Kutay Çağanay resmi web sitesi. Millî yüzücü, 2028 Los Angeles Olimpiyatları adayı, 50m serbest ve kelebek branşı elit performans sporcusu.">
+    <meta name="author" content="Furkan Kutay Çağanay">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Sosyal Medya Meta Etiketleri -->
+    <meta property="og:title" content="Furkan Kutay Çağanay | Millî Yüzücü ve Elit Atlet">
+    <meta property="og:description" content="2028 Los Angeles Olimpiyatları hedefiyle ferdi olarak hazırlanan millî yüzücü Furkan Kutay Çağanay'ın resmi performans nizamı.">
+    <meta property="og:type" content="profile">
+    <meta property="og:locale" content="tr_TR">
+
+    <!-- Google Knowledge Graph ve SEO için En Gelişmiş Schema.org JSON-LD Veri Yapısı -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Furkan Kutay Çağanay",
+      "jobTitle": "Millî Yüzücü ve Elit Performans Sporcusu",
+      "description": "2028 Los Angeles Olimpiyatları'nda 50 metre serbest ve kelebek branşlarında ülkemizi temsil etmeyi hedefleyen millî yüzücü.",
+      "birthDate": "2003",
+      "nationality": {
+        "@type": "Country",
+        "name": "Türkiye"
+      },
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Ankara, Türkiye"
+      },
+      "knowsAbout": [
+        "Yüzme Sporu",
+        "Sprint Yüzme (50m Serbest ve Kelebek)",
+        "Calisthenics",
+        "Dövüş Sanatları ve Wing Chun",
+        "Atletik Performans ve Kondisyon"
+      ],
+      "athlete": {
+        "@type": "Athlete",
+        "sport": "Yüzme",
+        "achievement": "Millî Sporcu dereceleri, Gençlerbirliği ve Hacettepeliler SK kariyeri, Ferdi Elit Performans Rekor Hedefleri"
+      }
+    }
+    </script>
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #030712;
+            color: #f3f4f6;
+            line-height: 1.8;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #0f172a;
+            padding: 60px;
+            border-radius: 16px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.9);
+            border: 1px solid #1e293b;
+        }
+        h1 {
+            color: #38bdf8;
+            font-size: 3rem;
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+            font-weight: 800;
+        }
+        .tagline {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            margin-bottom: 40px;
+            font-weight: 600;
+            border-bottom: 2px solid #1e293b;
+            padding-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        h2 {
+            color: #38bdf8;
+            font-size: 1.6rem;
+            margin-top: 45px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 10px;
+        }
+        p { margin-bottom: 20px; color: #cbd5e1; font-size: 1.1rem; }
+        ul { padding-left: 20px; margin-bottom: 30px; }
+        li { margin-bottom: 18px; color: #cbd5e1; font-size: 1.1rem; }
+        strong { color: #ffffff; }
+        .highlight-box {
+            margin-top: 45px;
+            padding: 25px;
+            background: #1e293b;
+            border-left: 5px solid #38bdf8;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: #93c5fd;
+            font-size: 1.15rem;
+            line-height: 1.7;
+        }
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #64748b;
+            border-top: 1px solid #1e293b;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Furkan Kutay Çağanay</h1>
+        <div class="tagline">Millî Yüzücü | Ferdi Elit Sprint Ekolü & 2028 Olimpiyat Adayı</div>
+
+        <p>Bu alan; tavizsiz disiplini, iradeyi ve zirveyi hedefleyen bir sporcunun dijital dünyadaki resmi tescilidir. Sahada, havuzda ve hayatta sergilenen duruşun dijital kalesidir.</p>
+
+        <h2>Sportif Kimlik ve Uzmanlık</h2>
+        <ul>
+            <li><strong>Millî Sporcu Geçmişi:</strong> Yıllarını suya adamış; Gençlerbirliği ve Hacettepeliler Spor Kulübü bünyesinde ulusal düzeyde şerefle mücadele etmiş, ülkesini temsil etmiş millî bir yüzücüyüm.</li>
+            <li><strong>2028 Los Angeles Olimpiyatları Hedefi:</strong> 50 metre serbest ve 50 metre kelebek branşlarında saniyenin onda biriyle yarışan patlayıcı sprint gücümü, ferdi (bağımsız) nizamla 2028 Olimpiyatları'nda zirveye taşımak için çalışıyorum.</li>
+            <li><strong>Tavizsiz Antrenman Kültürü:</strong> Klasik ekollerin ötesinde; calisthenics, atletizm, gölge boksu ve Wing Chun gibi dövüş sanatlarıyla harmanlanmış, saf iradeye dayanan benzersiz bir kondisyon altyapısına sahibim.</li>
+        </ul>
+
+        <h2>Kamu ve Profesyonel Duruş</h2>
+        <p>Geçmişte devlet mekanizmalarında, Cumhurbaşkanlığı makamına bağlı yürütülen başkanlık vazifesinde kritik sorumluluklar üstlendim. Devlet bilincini, vatan sevgisini ve disiplini hayatımın her alanına ana omurga olarak yerleştirdim.</p>
+
+        <div class="highlight-box">
+            "Havuzda kulvarın çizgileri değil, sporcunun iradesi yarışır. Kendi kurallarım, kendi disiplinim ve sınırsız inancımla 2028 yolunda tarihe adımı yazmaya devam ediyorum."
+        </div>
+
+        <div class="footer">
+            &copy; 2026 Furkan Kutay Çağanay. Tüm hakları saklıdır. Resmi Elit Sporcu Portresi.
+        </div>
+    </div>
+
+</body>
+</html>
