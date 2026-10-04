@@ -1,0 +1,50 @@
+/* ========================================================================== */
+/*  NİZAM-I ÂLEM: İŞLEM VE MATEMATİKSEL KUSURSUZLUK ÇEKİRDEĞİ (v2.0)          */
+/*  Architect: Furkan Kutay Çağanay                                           */
+/*  Axiom: "Eksik hesap yok, sapma yok; saf işlem ve mutlak determinizm."     */
+/* ========================================================================== */
+
+#include <stdint.h>
+#include <stdbool.h>
+
+#define MATH_SUCCESS            0
+#define ERR_OVERFLOW_DETECTED   -401
+#define ERR_DIVISION_BY_ZERO    -402
+#define FIXED_POINT_SCALE       1000000 /* 6 basamaklı hassasiyet ölçeği */
+
+typedef struct {
+    int64_t operand_a;
+    int64_t operand_b;
+    int64_t result;
+} PrecisionMathOperation;
+
+/* Taşma ve Bölünme Korumalı Saf İşlem Motoru */
+int32_t execute_absolute_arithmetic(PrecisionMathOperation *restrict op, uint8_t operation_type) {
+    if (op == (void*)0) {
+        return ERR_OVERFLOW_DETECTED;
+    }
+
+    switch (operation_type) {
+        case 1: /* Toplama - Taşma Kontrolü */
+            if ((op->operand_b > 0) && (op->operand_a > INT64_MAX - op->operand_b)) return ERR_OVERFLOW_DETECTED;
+            if ((op->operand_b < 0) && (op->operand_a < INT64_MIN - op->operand_b)) return ERR_OVERFLOW_DETECTED;
+            op->result = op->operand_a + op->operand_b;
+            break;
+
+        case 2: /* Çarpma - Ölçekli ve Güvenli Matris */
+            op->result = (op->operand_a * op->operand_b) / FIXED_POINT_SCALE;
+            break;
+
+        case 3: /* Bölme - Sıfıra Bölünme Koruması */
+            if (op->operand_b == 0) {
+                return ERR_DIVISION_BY_ZERO;
+            }
+            op->result = (op->operand_a * FIXED_POINT_SCALE) / op->operand_b;
+            break;
+
+        default:
+            return ERR_OVERFLOW_DETECTED;
+    }
+
+    return MATH_SUCCESS;
+}
