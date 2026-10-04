@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furkan Kutay Çağanay | Resmi Millî Sporcu ve Elit Yüzücü Portresi</title>
+    <meta name="description" content="Furkan Kutay Çağanay resmi web sitesi. Millî yüzücü, 2028 Los Angeles Olimpiyatları adayı, devlet bilinciyle yetişmiş elit performans sporcusu.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://furkankutaycaganay.netlify.app/">
+
+    <!-- Google Knowledge Graph Schema.org Resmi Veri Yapısı -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Furkan Kutay Çağanay",
+      "jobTitle": "Millî Yüzücü ve Elit Performans Sporcusu",
+      "description": "2028 Los Angeles Olimpiyatları'nda ülkemizi temsil etmek üzere ferdi olarak hazırlanan millî sporcu.",
+      "birthDate": "2003",
+      "nationality": {"@type": "Country", "name": "Türkiye"},
+      "homeLocation": {"@type": "Place", "name": "Ankara, Türkiye"},
+      "knowsAbout": ["Sprint Yüzme", "50m Serbest", "50m Kelebek", "Elit Atletik Performans", "Devlet Disiplini"],
+      "athlete": {"@type": "Athlete", "sport": "Yüzme"}
+    }
+    </script>
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #0b0f19;
+            color: #f1f5f9;
+            line-height: 1.8;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: #111827;
+            padding: 60px;
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+            border: 1px solid #1f2937;
+        }
+        h1 {
+            color: #38bdf8;
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 5px;
+        }
+        .tagline {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 35px;
+            border-bottom: 2px solid #1f2937;
+            padding-bottom: 15px;
+            font-weight: 600;
+        }
+        h2 {
+            color: #38bdf8;
+            font-size: 1.5rem;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #1f2937;
+            padding-bottom: 8px;
+        }
+        p, li { color: #cbd5e1; font-size: 1.1rem; margin-bottom: 16px; }
+        ul { padding-left: 20px; margin-bottom: 25px; }
+        strong { color: #ffffff; }
+        .official-box {
+            background: #1f2937;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid #38bdf8;
+            font-size: 1.15rem;
+            color: #e2e8f0;
+            margin: 35px 0;
+            line-height: 1.9;
+        }
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #64748b;
+            border-top: 1px solid #1f2937;
+            padding-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .container { padding: 25px; margin: 15px; }
+            h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Furkan Kutay Çağanay</h1>
+        <div class="tagline">Millî Yüzücü | Elit Sprint Ekolü & 2028 Olimpiyat Adayı</div>
+
+        <p>Devlet terbiyesi ve millet bilinciyle yetişmiş; havuzda saniyelerle, hayatta ise en yüksek ideallerle yarışan bağımsız (ferdi) performans sporcusunun resmi dijital portresidir.</p>
+
+        <h2>Sportif Kimlik ve Millî Geçmiş</h2>
+        <ul>
+            <li><strong>Millî Sporcu Statüsü:</strong> Yıllarını suya adamış; Gençlerbirliği ve Hacettepeliler Spor Kulübü bünyesinde ulusal ve uluslararası düzeyde şerefle mücadele etmiş tescilli millî yüzücü.</li>
+            <li><strong>2028 Los Angeles Olimpiyatları Hedefi:</strong> 50 metre serbest ve 50 metre kelebek branşlarında ülkesini en iyi şekilde temsil etmek, bayrağımızı dalgalandırmak ve zirveye çıkmak için sürdürülen ferdi hazırlık süreci.</li>
+            <li><strong>Disiplin ve Antrenman Anlayışı:</strong> Klasik ekollerin ötesinde; calisthenics, atletik kondisyon ve dövüş sanatlarının patlayıcı gücüyle harmanlanmış tavizsiz sporcu disiplini.</li>
+        </ul>
+
+        <h2>Devlet Bilinci ve Kamu Duruşu</h2>
+        <p>Geçmişte devlet mekanizmalarında (Cumhurbaşkanlığı makamına bağlı yürütülen kritik vazifelerde) üstlenilen sorumluluklar; spora ve hayata bakışın temel omurgasını oluşturmuştur. Vatan sevgisi, liyakat ve sarsılmaz çalışma disiplini her adımın temelindedir.</p>
+
+        <div class="official-box">
+            "Devlete hizmet bir şeref, sporda bayrağı dalgalandırmak en büyük vecibedir. Kendi nizamımız, çelikten irademiz ve sarsılmaz inancımızla 2028 yolunda yürümeye devam ediyoruz."
+        </div>
+
+        <div class="footer">
+            &copy; 2026 Furkan Kutay Çağanay. Tüm hakları saklıdır. Resmi Elit Sporcu Portresi.
+        </div>
+    </div>
+
+</body>
+</html>
