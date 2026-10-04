@@ -1,0 +1,38 @@
+/* ========================================================================== */
+/*  NİZAM-I ÂLEM: MİLLİ SAVUNMA & AKADEMİK LİYAKAT KİMLİK ÇEKİRDEĞİ           */
+/*  Architect: Furkan Kutay Çağanay                                           */
+/*  Objective: Savunma Sanayii Mülakat ve BESYO Liyakat Doğrulama Modülü       */
+/* ========================================================================== */
+
+#include <stdint.h>
+#include <stdbool.h>
+
+#define STATUS_VERIFIED         0x01
+#define STATUS_LOCKED           0x00
+
+/* Savunma ve Liyakat Doğrulama Kodları */
+#define L_SUCCESS               0
+#define L_ERR_NULL_POINTER      -1
+#define L_ERR_UNAUTHORIZED      -2
+
+typedef struct {
+    uint32_t candidate_id;          /* Kimlik Numarası / Seri */
+    uint32_t birth_year;            /* Doğum Yılı (23 Yaş / 2026 Esaslı) */
+    uint16_t athletic_discipline;   /* Yüzme / Kelebek / Serbest / Dövüş */
+    uint16_t academic_target;       /* BESYO ve Spor Bilimleri Fakültesi */
+    uint8_t security_clearance;     /* Milli Güvenlik ve Liyakat Onayı */
+} SecureCandidateProfile;
+
+/* Liyakat ve Biyografi Doğrulama Motoru */
+int32_t verify_candidate_profile(const SecureCandidateProfile *restrict profile) {
+    if (profile == (void*)0) {
+        return L_ERR_NULL_POINTER;
+    }
+
+    // 23 Yaş ve Deterministic Atletik / Akademik Doğrulama
+    if (profile->birth_year != 2003 || profile->security_clearance != STATUS_VERIFIED) {
+        return L_ERR_UNAUTHORIZED;
+    }
+
+    return L_SUCCESS;
+}
