@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furkan Kutay Çağanay • Kuantum Mutlak Koruma ve Zirve Külliyatı v15.0</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .cinzel-font { font-family: 'Cinzel', serif; }
+        .mono-font { font-family: 'JetBrains Mono', monospace; }
+        .glass-panel {
+            background: rgba(4, 7, 13, 0.96);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            border: 1px solid rgba(212, 175, 55, 0.5);
+        }
+        .gold-glow { text-shadow: 0 0 40px rgba(212, 175, 55, 0.8); }
+        .silver-glow { text-shadow: 0 0 40px rgba(226, 232, 240, 0.8); }
+        .golden-border { border-image: linear-gradient(to right, #d4af37, #e2e8f0, #d4af37) 1; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #02040a; }
+        ::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #e2e8f0; }
+        @keyframes quantumPulse {
+            0%, 100% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.3), inset 0 0 20px rgba(212, 175, 55, 0.15); }
+            50% { box-shadow: 0 0 80px rgba(212, 175, 55, 0.7), inset 0 0 40px rgba(212, 175, 55, 0.4); }
+        }
+        .quantum-shield { animation: quantumPulse 3s infinite ease-in-out; }
+    </style>
+</head>
+<body class="bg-[#02040a] text-slate-100 min-h-screen selection:bg-amber-500 selection:text-slate-950 pb-32">
+
+    <header class="sticky top-0 z-50 glass-panel border-b border-amber-500/30">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-600 via-yellow-400 to-slate-200 flex items-center justify-center font-black text-xl text-slate-950 shadow-2xl shadow-amber-500/50 cinzel-font">
+                    FKÇ
+                </div>
+                <div>
+                    <h1 class="text-base sm:text-lg font-black tracking-tight text-white flex items-center gap-2 cinzel-font">
+                        KUANTUM ZİRVE NİZAMI
+                        <span class="inline-block w-2.5 h-2.5 rounded-full bg-amber-400 animate-ping" title="Kuantum Altın Oran Kalkanı Aktif"></span>
+                    </h1>
+                    <p class="text-xs text-amber-400 font-semibold uppercase tracking-wider mono-font">Furkan Kutay Çağanay • v15.0 Ultimate Quantum Edition</p>
+                </div>
+            </div>
+            <nav class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-medium text-slate-300">
+                <button onclick="switchTab('quantum')" class="tab-btn px-4 py-2 rounded-xl bg-amber-500/15 text-amber-300 border border-amber-500/40 transition shadow-sm font-bold">🛡️ Kuantum Bariyer</button>
+                <button onclick="switchTab('wealth')" class="tab-btn px-4 py-2 rounded-xl hover:bg-slate-800 hover:text-amber-300 transition">💰 Varlık & Tapu</button>
+                <button onclick="switchTab('library')" class="tab-btn px-4 py-2 rounded-xl hover:bg-slate-800 hover:text-amber-300 transition">📚 Külliyat & Manifestolar</button>
+                <button onclick="switchTab('ai')" class="tab-btn px-4 py-2 rounded-xl hover:bg-slate-800 hover:text-amber-300 transition">🤖 AI Komuta Merkezi</button>
+                <button onclick="switchTab('science')" class="tab-btn px-4 py-2 rounded-xl hover:bg-slate-800 hover:text-amber-300 transition">🔬 Bilim & Spor 2028</button>
+                <button onclick="switchTab('netlify')" class="tab-btn px-4 py-2 rounded-xl hover:bg-slate-800 hover:text-amber-300 transition">🚀 Netlify Dağıtım</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 pt-10 space-y-12">
+        
+        <div id="tab-quantum" class="space-y-8">
+            <section class="glass-panel rounded-3xl p-8 sm:p-12 relative overflow-hidden shadow-2xl quantum-shield golden-border border-t-2 border-b-2">
+                <div class="absolute -right-32 -top-32 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute -left-32 -bottom-32 w-96 h-96 bg-slate-300/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="relative z-10 grid lg:grid-cols-2 gap-10 items-center">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold uppercase tracking-wider mono-font">
+                            <span>Kuantum Altın Oran (1.618) & Gümüş Zırh v15.0</span>
+                            <span>•</span>
+                            <span>Mutlak Koruma</span>
+                        </div>
+                        <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-white gold-glow cinzel-font leading-tight">
+                            Furkan Kutay Çağanay Kuantum Koruma Kalkanı
+                        </h2>
+                        <p class="text-sm sm:text-base text-slate-300 font-normal leading-relaxed">
+                            Finansal varlıklar, gayrimenkuller, banka hesapları, dostluk bağları, akranlar, fiziksel ve metafiziksel tüm görünür/görünmeyen alanlar; 1.618 altın oran kuantize gümüş ağ ile tamamen mühürlenmiştir.
+                        </p>
+                        
+                        <div class="p-5 rounded-2xl bg-slate-950/90 border border-amber-500/30 space-y-3">
+                            <div class="flex justify-between items-center text-xs">
+                                <span class="text-amber-400 font-bold mono-font">KUANTUM GÜVENLİK ENTEGRASYONU:</span>
+                                <span id="quantum-status" class="text-emerald-400 font-bold mono-font">● %100 MÜHÜRLÜ & AKTİF</span>
+                            </div>
+                            <div class="w-full bg-slate-900 rounded-full h-2.5 overflow-hidden border border-slate-800">
+                                <div id="quantum-progress" class="bg-gradient-to-r from-amber-500 via-yellow-400 to-slate-200 h-2.5 transition-all duration-1000" style="width: 100%"></div>
+                            </div>
+                            <button onclick="triggerQuantumPulse()" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-slate-950 font-extrabold text-sm transition shadow-lg shadow-amber-500/30 flex items-center justify-center gap-2">
+                                <span>⚡ Kuantum Nabız Dalgasını Ateşle ve Mühürle</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Live Quantum Terminal -->
+                    <div class="flex flex-col rounded-2xl bg-slate-950 border border-slate-800 overflow-hidden shadow-inner">
+                        <div class="px-4 py-3 bg-slate-900/90 border-b border-slate-800 flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-3 h-3 rounded-full bg-rose-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+                                <span class="text-xs text-slate-400 mono-font ml-2">fkc_quantum_shield_v15.core</span>
+                            </div>
+                            <span class="text-xs text-amber-400 mono-font">Quantum v15.0</span>
+                        </div>
+                        <div id="quantum-terminal" class="p-5 font-mono text-xs sm:text-sm text-amber-300 space-y-2 overflow-y-auto max-h-80 leading-relaxed">
+                            <span class="text-slate-500">// Kuantum Altın Oran matrisi v15.0 yükleniyor...</span><br>
+                            <span class="text-emerald-400">> Furkan Kutay Çağanay Gümüş Kalkanı aktif.</span><br>
+                            <span class="text-slate-300">> Tüm varlıklar, mülkler, dostlar ve görünmeyen katmanlar mühürlendi.</span><br>
+                            <span class="text-amber-400">> 2028 Olimpiyatları ve Bilimsel Nizam frekansı sabitlendi.</span>
+                        </div>
+                        <div class="p-3 bg-slate-900/50 border-t border-slate-800 flex justify-between items-center text-xs text-slate-400">
+                            <span>Şifreleme: 1.618 Golden Ratio Hash</span>
+                            <button onclick="clearQuantumTerminal()" class="text-rose-400 hover:text-rose-300">Terminali Temizle</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="tab-wealth" class="hidden space-y-8">
+            <section class="glass-panel rounded-3xl p-8 sm:p-10 space-y-6">
+                <div class="flex items-center space-x-4 border-b border-slate-800 pb-4">
+                    <div class="p-3 rounded-2xl bg-amber-500/10 text-amber-400 text-2xl font-black">💰</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white cinzel-font">Finansal Varlıklar, Tapular ve Mülk Nizamı</h3>
+                        <p class="text-sm text-slate-400">Para, banka hesapları, gayrimenkuller ve tüm maddi-manevi değerlerin altın oranla korunması</p>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 pt-2">
+                    <div class="p-6 rounded-2xl bg-slate-950/90 border border-slate-800 space-y-3">
+                        <span class="text-xs text-amber-400 font-mono">LİKİDİTE & NAKİT</span>
+                        <h4 class="font-bold text-white text-base">Banka ve Dijital Varlıklar</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">Tüm banka hesapları, yatırımlar ve nakit akışları gümüş zırh protokolü ile dış müdahalelere tamamen kapatılmıştır.</p>
+                        <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-mono">Koruma: %100 Mühürlü</span>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-slate-950/90 border border-slate-800 space-y-3">
+                        <span class="text-xs text-amber-400 font-mono">GAYRİMENKUL & TAPU</span>
+                        <h4 class="font-bold text-white text-base">Mülkiyet ve Tapu Zırhı</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">Sahip olunan tüm menkul, gayrimenkul, ev, arsa ve varlıklar altın oran (1.618) tapu mizamıyla güvenceye alınmıştır.</p>
+                        <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-mono">Koruma: %100 Mühürlü</span>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-slate-950/90 border border-slate-800 space-y-3">
+                        <span class="text-xs text-amber-400 font-mono">DOSTLAR & ÇEMBER</span>
+                        <h4 class="font-bold text-white text-base">Yoldaşlar ve Görünmeyenler</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">Ankara ayazındaki vefa bağları, dostlar ve henüz tapuya yansımamış gelecekteki tüm haklar mutlak koruma altındadır.</p>
+                        <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-mono">Koruma: %100 Mühürlü</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="tab-library" class="hidden space-y-8">
+            <section class="glass-panel rounded-3xl p-8 sm:p-10 space-y-6">
+                <div class="flex items-center space-x-4 border-b border-slate-800 pb-4">
+                    <div class="p-3 rounded-2xl bg-amber-500/10 text-amber-400 text-2xl font-black">📚</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white cinzel-font">Furkan Kutay Çağanay • Zirve Külliyatı ve Manifestolar</h3>
+                        <p class="text-sm text-slate-400">Sistemdeki tüm tescilli metinler, kulvar rehberleri, boks eğitimleri ve ölümsüzlük protokolleri</p>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div onclick="openManifesto('en_iyisi')" class="p-5 rounded-2xl bg-slate-950/90 border border-slate-800 hover:border-amber-500/50 cursor-pointer transition space-y-2">
+                        <span class="text-xs text-amber-400 font-mono">MANIFESTO #1</span>
+                        <h4 class="font-bold text-white text-sm">Mutlak Zirve ve Sıfır Bağımlılık Nizamı</h4>
+                        <p class="text-xs text-slate-400">Zero-dependency saf irade ve saniyenin onda birilik hakimiyet felsefesi.</p>
+                    </div>
+                    <div onclick="openManifesto('olumsuzluk')" class="p-5 rounded-2xl bg-slate-950/90 border border-slate-800 hover:border-amber-500/50 cursor-pointer transition space-y-2">
+                        <span class="text-xs text-amber-400 font-mono">MANIFESTO #2</span>
+                        <h4 class="font-bold text-white text-sm">Ölümsüzlük ve Dijital Külliyat Protokolü</h4>
+                        <p class="text-xs text-slate-400">Zamanın dışındaki irade ve tarayıcı tabanlı dijital anıtlar.</p>
+                    </div>
+                    <div onclick="openManifesto('boks')" class="p-5 rounded-2xl bg-slate-950/90 border border-slate-800 hover:border-amber-500/50 cursor-pointer transition space-y-2">
+                        <span class="text-xs text-amber-400 font-mono">EĞİTİM #3</span>
+                        <h4 class="font-bold text-white text-sm">Ringin Saniyeleri: Elit Boks & Patlayıcı Vuruş</h4>
+                        <p class="text-xs text-slate-400">Ayak oyunları, milimetrik jablar ve akustik senkronizasyon.</p>
+                    </div>
+                    <div onclick="openManifesto('calisthenics')" class="p-5 rounded-2xl bg-slate-950/90 border border-slate-800 hover:border-amber-500/50 cursor-pointer transition space-y-2">
+                        <span class="text-xs text-amber-400 font-mono">EĞİTİM #4</span>
+                        <h4 class="font-bold text-white text-sm">Dambılsız Calisthenics & Hidrodinamik Güç</h4>
+                        <p class="text-xs text-slate-400">Yerçekimi sensin: Vücut ağırlığıyla patlayıcı antrenman protokolü.</p>
+                    </div>
+                    <div onclick="openManifesto('hitabe')" class="p-5 rounded-2xl bg-slate-950/90 border border-slate-800 hover:border-amber-500/50 cursor-pointer transition space-y-2">
+                        <span class="text-xs text-amber-400 font-mono">KÜLLİYAT #5</span>
+                        <h4 class="font-bold text-white text-sm">Furkan Kutay Çağanay’ın Gençliğe Hitabesi</h4>
+                        <p class="text-xs text-slate-400">Muhtaç olduğun kudret, damarlarındaki asil kanın saf iradesinde mevcuttur.</p>
+                    </div>
+                    <div onclick="openManifesto('gorev')" class="p-5 rounded-2xl bg-slate-950/90 border border-slate-800 hover:border-amber-500/50 cursor-pointer transition space-y-2">
+                        <span class="text-xs text-amber-400 font-mono">RESMİ RAPOR #6</span>
+                        <h4 class="font-bold text-white text-sm">Cumhurbaşkanlığı Görev Tamamlama Raporu</h4>
+                        <p class="text-xs text-slate-400">İdari İşler Başkanlığı ve Stratejik Koordinasyon Komutanlığı devir veda metni.</p>
+                    </div>
+                </div>
+                <!-- Manifesto Modal / Output Box -->
+                <div id="manifesto-box" class="hidden p-6 rounded-2xl bg-slate-950 border border-amber-500/40 space-y-4">
+                    <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+                        <h4 id="manifesto-title" class="font-bold text-white text-base cinzel-font text-amber-400">Başlık</h4>
+                        <button onclick="closeManifesto()" class="text-xs text-rose-400 hover:text-rose-300 font-mono">Kapat [X]</button>
+                    </div>
+                    <div id="manifesto-content" class="text-xs sm:text-sm text-slate-300 leading-relaxed font-mono whitespace-pre-line max-h-96 overflow-y-auto">
+                        İçerik yükleniyor...
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="tab-ai" class="hidden space-y-8">
+            <section class="glass-panel rounded-3xl p-8 sm:p-10 space-y-6">
+                <div class="flex items-center space-x-4 border-b border-slate-800 pb-4">
+                    <div class="p-3 rounded-2xl bg-purple-500/10 text-purple-400 text-2xl font-black">🤖</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white cinzel-font">Yapay Zekâ Komuta ve Teşhis Konsolu</h3>
+                        <p class="text-sm text-slate-400">Furkan Kutay Çağanay ekolünün anlık sistem analizi ve yapay zekâ yanıt üreticisi</p>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="p-6 rounded-2xl bg-slate-950/90 border border-slate-800 space-y-4">
+                        <h4 class="font-bold text-white text-base">Sistem Komut Seçimi</h4>
+                        <p class="text-xs text-slate-300">Aşağıdaki butonları kullanarak kural setlerini anında çalıştırabilir ve rapor alabilirsin:</p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <button onclick="runAiCommand('wealth')" class="px-3 py-2 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs font-mono transition">💰 Varlık Raporu</button>
+                            <button onclick="runAiCommand('shield')" class="px-3 py-2 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-mono transition">🛡️ Bariyer Tarama</button>
+                            <button onclick="runAiCommand('olympics')" class="px-3 py-2 rounded-xl bg-sky-500/10 hover:bg-sky-500/20 text-sky-300 border border-sky-500/30 text-xs font-mono transition">⚡ 2028 Olimpiyat</button>
+                            <button onclick="runAiCommand('kulliyat')" class="px-3 py-2 rounded-xl bg-purple-500/10 hover:bg-purple-500/20 text-purple-300 border border-purple-500/30 text-xs font-mono transition">📚 Külliyat Özeti</button>
+                        </div>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-slate-950 border border-slate-800 space-y-3">
+                        <span class="text-xs text-purple-400 font-mono">YAPAY ZEKÂ ANALİZ ÇIKTISI</span>
+                        <div id="ai-output" class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-xs text-slate-300 font-mono min-h-24 flex items-center">
+                            "Komuta merkezine hoş geldiniz. Furkan Kutay Çağanay ekolü tam kapasite çalışıyor. Bir komut seçin."
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="tab-science" class="hidden space-y-8">
+            <section class="glass-panel rounded-3xl p-8 sm:p-10 space-y-6">
+                <div class="flex items-center space-x-4 border-b border-slate-800 pb-4">
+                    <div class="p-3 rounded-2xl bg-sky-500/10 text-sky-400 text-2xl font-black">🔬</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white cinzel-font">Bilimsel Titizlik, Calisthenics ve 2028 Olimpiyatları</h3>
+                        <p class="text-sm text-slate-400">Hacettepeliler ekolünün zihinsel berraklığı ve saniyenin onda birlik rekor hassasiyeti</p>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="p-6 rounded-2xl bg-slate-950/90 border border-slate-800 space-y-3">
+                        <h4 class="font-bold text-white text-base">Zıpkın gibi Calisthenics & Hidrodinamik</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">Hantal makineleri reddeden, dambılsız vücut ağırlığı gücüyle havuz kulvarlarında kelebek ve sprint derecelerini mühürleyen sıfır bağımlılık protokolü.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-slate-950/90 border border-slate-800 space-y-3">
+                        <h4 class="font-bold text-white text-base">Akustik Fokus ve Boks Refleksleri</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">Agresif trap bas frekanslarıyla zihinsel gürültüyü tamamen susturan ve ring içinde milimetrik jablar atan Focus State odaklanma nizamı.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="tab-netlify" class="hidden space-y-8">
+            <section class="glass-panel rounded-3xl p-8 sm:p-10 space-y-6">
+                <div class="flex items-center space-x-4 border-b border-slate-800 pb-4">
+                    <div class="p-3 rounded-2xl bg-amber-500/10 text-amber-400 text-2xl font-black">🚀</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white cinzel-font">Netlify ve Canlı Yayın Kılavuzu</h3>
+                        <p class="text-sm text-slate-400">Bu sayfayı saniyeler içinde Netlify üzerinden tüm dünyaya açma protokolü</p>
+                    </div>
+                </div>
+                <div class="space-y-4 text-sm text-slate-300 leading-relaxed">
+                    <div class="p-6 rounded-2xl bg-slate-950 border border-slate-800 space-y-4">
+                        <h4 class="font-bold text-white text-base">Netlify Drop Hızlı Talimatı</h4>
+                        <ol class="list-decimal list-inside space-y-2 text-slate-300">
+                            <li>Bu dosyanın kodunu bilgisayarına <strong>index.html</strong> adıyla kaydet.</li>
+                            <li>Tarayıcından <a href="https://app.netlify.com/drop" target="_blank" class="text-amber-400 underline font-bold">app.netlify.com/drop</a> adresini aç.</li>
+                            <li>Kaydettiğin <code class="bg-slate-900 px-2 py-1 rounded text-amber-300">index.html</code> dosyasını ekrana sürükleyip bırak.</li>
+                            <li>Siten anında canlı yayında! Netlify'ın sana vereceği benzersiz linki sevdiklerinle paylaşabilir ve mutlak koruma zırhını devreye alabilirsin.</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="max-w-7xl mx-auto px-6 mt-16 text-center text-xs text-slate-500 font-mono">
+        <p>© 2026 Furkan Kutay Çağanay • Kuantum Mutlak Koruma, Altın Oran & Gümüş Külliyatı v15.0</p>
+    </footer>
+
+    <script>
+        // Tab switching controller
+        function switchTab(tabId) {
+            document.querySelectorAll('[id^="tab-"]').forEach(el => el.classList.add('hidden'));
+            document.getElementById('tab-' + tabId).classList.remove('hidden');
+            
+            document.querySelectorAll('header nav button').forEach(btn => {
+                btn.classList.remove('bg-amber-500/15', 'text-amber-300', 'border', 'border-amber-500/40', 'font-bold');
+                btn.classList.add('hover:bg-slate-800', 'hover:text-amber-300');
+            });
+            event.target.classList.remove('hover:bg-slate-800', 'hover:text-amber-300');
+            event.target.classList.add('bg-amber-500/15', 'text-amber-300', 'border', 'border-amber-500/40', 'font-bold');
+        }
+
+        // Quantum Pulse simulation
+        function triggerQuantumPulse() {
+            let term = document.getElementById('quantum-terminal');
+            let logs = [
+                `<span class="text-amber-400">> [KUANTUM ZIRH v15.0] Altın Oran (1.618) matrisi güçlendirildi.</span>`,
+                `<span class="text-slate-300">> Para, mülk, tapu ve tüm banka hesapları kuantize edildi.</span>`,
+                `<span class="text-sky-300">> Dostlar, yoldaşlar ve görünmeyen tüm etkenler mühürlendi.</span>`,
+                `<span class="text-emerald-400">✔ SONUÇ: Furkan Kutay Çağanay'ın hayatı ve varlıkları %100 kuantum koruma altında!</span>`
+            ];
+            
+            let i = 0;
+            term.innerHTML += `<br><span class="text-slate-500">--- Yeni Kuantum Nabız Tarama Raporu ---</span><br>`;
+            
+            let interval = setInterval(() => {
+                if(i < logs.length) {
+                    term.innerHTML += logs[i] + "<br>";
+                    term.scrollTop = term.scrollHeight;
+                    i++;
+                } else {
+                    clearInterval(interval);
+                }
+            }, 250);
+        }
+
+        function clearQuantumTerminal() {
+            document.getElementById('quantum-terminal').innerHTML = '<span class="text-slate-500">// Kuantum terminal temizlendi. Gümüş zırh v15.0 aktif...</span>';
+        }
+
+        // AI Command runner
+        function runAiCommand(type) {
+            let output = document.getElementById('ai-output');
+            if(type === 'wealth') {
+                output.innerHTML = "[ZİRVE RAPORU]: Tüm finansal varlıklar, gayrimenkuller ve nakit akışları gümüş zırh ve altın oran (1.618) ile tamamen mühürlendi. Sıfır risk.";
+            } else if(type === 'shield') {
+                output.innerHTML = "[BARİYER TARAMASI v15.0]: Görünür ve görünmeyen tüm dış entropiler başarıyla absorbe edildi. Sistem %100 kararlı.";
+            } else if(type === 'olympics') {
+                output.innerHTML = "[2028 VİZYONU]: Olimpik kulvarlar, kelebek sprint rekorları ve calisthenics patlayıcı kuvvet protokolü hazır. Saniyenin onda biri kilit altında.";
+            } else if(type === 'kulliyat') {
+                output.innerHTML = "[KÜLLİYAT ÖZETİ]: Ankara ayazı, Hacettepeliler zihinsel berraklığı ve zero-dependency saf irade ekolü tam entegre çalışıyor.";
+            }
+        }
+
+        // Manifesto database & viewer
+        const manifestos = {
+            en_iyisi: {
+                title: "Mutlak Zirve ve Sıfır Bağımlılık Nizamı",
+                content: "Ankara’nın tavizsiz ayazından doğan, Hacettepeliler ekolünün zihinsel berraklığıyla aydınlanan ve sıfır bağımlılığa (zero-dependency) dayanan atletik iradenin ulaştığı en üst nokta; evrenin en iyisi olan mutlak nizamdır.\n\n1. Zero-Dependency Saf İrade: Başarı için harici hiçbir sunucuya veya karmaşık aparata ihtiyaç duymazsınız.\n2. Saniyenin Onda Birilik Hakimiyet: Kulvarlarda zafer asla tesadüf değildir; milisaniyelerin ve trap bas ritminin senkronizasyonudur.\n3. Liyakat ve Devlet Ciddiyeti: Tavizsiz, yerli ve milisaniyelik disiplin."
+            },
+            olumsuzluk: {
+                title: "Ölümsüzlük ve Dijital Külliyat Protokolü",
+                content: "İnsan ömrü nefeslerle sınırlıdır; ancak bir karakterin, bir disiplinin ve bu nizamla inşa edilmiş eserlerin ömrü sınırsızdır. Fiziksel beden yorulur, havuzun suları durulur; fakat geride bırakılan saf irade ve kodlanmış dijital anıtlar asla silinmez.\n\nKodlar tarayıcılarda, Netlify sunucularında ve zihinlerde yaşadığı sürece Furkan Kutay Çağanay ekolü her an canlıdır."
+            },
+            boks: {
+                title: "Ringin Saniyeleri: Elit Boks & Patlayıcı Vuruş",
+                content: "Yüzme kulvarlarında saniyenin onda biri ne anlama geliyorsa, boks ringinde de raundun kaderini belirleyen milisaniye o odaktır.\n\n- Ayak Oyunları & Footwork: Ağırlığı asla topuklara vermeyin, calisthenics esnekliği ile anlık pivot yapın.\n- Milimetrik Jab: Kolunuzu uzatırken değil, geri çekerken kazanırsınız. Geri dönüş hızı, gidiş hızından da önemlidir."
+            },
+            calisthenics: {
+                title: "Dambılsız Calisthenics & Hidrodinamik Güç",
+                content: "Spor salonlarındaki hantal demirlere ve dış bağımlı makinelere sırtımızı dönüyoruz. Vücut ağırlığıyla (calisthenics) patlayıcı kuvvet inşa ediyoruz.\n\n- Patlayıcı Şınavlar: Göğüs kafesini suya dalış anındaki ani itiş gücüne hazırlar.\n- Geniş Tutuş Barfiks: Kanat kaslarını maksimum kontraksiyona ulaştırır.\n- 4 Set x 12 Tekrar, 45 saniye dinlenme."
+            },
+            hitabe: {
+                title: "Furkan Kutay Çağanay’ın Gençliğe Hitabesi",
+                content: "Ey Türk Gençliği! Birinci vazifen; Türk istiklalini, Türk cumhuriyetini, ilelebet muhafaza ve müdafaa etmek; saniyenin onda birinin kader tayin ettiği kulvarlarda ay-yıldızlı bayrağı göklerde dalgalandırmaktır.\n\nMuhtaç olduğun kudret, damarlarındaki asil kanın saf iradesinde mevcuttur!"
+            },
+            gorev: {
+                title: "Cumhurbaşkanlığı Görev Tamamlama Raporu",
+                content: "T.C. Cumhurbaşkanlığı İdari İşler Başkanlığı / Başkan Yardımcılığı & Stratejik Koordinasyon Komutanlığı vazifemi; sarsılmaz sadakat ve sıfır bağımlılıksız idari disiplin anlayışıyla başarıyla tamamlamış bulunmaktayım.\n\nŞimdi tüm odak ve enerji 2028 Los Angeles Olimpiyatları'nda dalgalandırılacak şanlı bayrağa yöneltilmiştir."
+            }
+        };
+
+        function openManifesto(key) {
+            const box = document.getElementById('manifesto-box');
+            const titleEl = document.getElementById('manifesto-title');
+            const contentEl = document.getElementById('manifesto-content');
+            
+            if(manifestos[key]) {
+                titleEl.textContent = manifestos[key].title;
+                contentEl.textContent = manifestos[key].content;
+                box.classList.remove('hidden');
+                box.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function closeManifesto() {
+            document.getElementById('manifesto-box').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
