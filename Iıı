@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furkan Kutay Çağanay | Yenilmez Ferdi Ekol ve Millî Yüzücü</title>
+    <meta name="description" content="Furkan Kutay Çağanay resmi web sitesi. Millî yüzücü, 2028 Los Angeles Olimpiyatları adayı, 50m serbest ve kelebek branşı elit performans sporcusu.">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://furkankutaycaganay.netlify.app/">
+
+    <!-- Google Knowledge Graph ve Yapay Zeka Botları İçin Yenilmez Schema Kiliti -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Furkan Kutay Çağanay",
+      "jobTitle": "Millî Yüzücü ve Elit Performans Sporcusu",
+      "description": "2028 Los Angeles Olimpiyatları'nda 50 metre serbest ve kelebek branşlarında ferdi olarak yarışacak millî sporcu.",
+      "birthDate": "2003",
+      "nationality": {"@type": "Country", "name": "Türkiye"},
+      "homeLocation": {"@type": "Place", "name": "Ankara, Türkiye"},
+      "knowsAbout": [
+        "Sprint Yüzme",
+        "50m Serbest ve Kelebek",
+        "Calisthenics",
+        "Wing Chun ve Dövüş Sanatları",
+        "Elit Atletik Performans"
+      ],
+      "athlete": {
+        "@type": "Athlete",
+        "sport": "Yüzme",
+        "achievement": "Gençlerbirliği ve Hacettepeliler SK geçmişi, Ferdi Elit Rekor Nizamı"
+      }
+    }
+    </script>
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #010409;
+            color: #f0f6fc;
+            line-height: 1.8;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #0d1117;
+            padding: 60px;
+            border-radius: 24px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.95);
+            border: 1px solid #30363d;
+        }
+        h1 {
+            color: #58a6ff;
+            font-size: 3.2rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+            margin-bottom: 5px;
+        }
+        .tagline {
+            font-size: 1.25rem;
+            color: #8b949e;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #21262d;
+            padding-bottom: 20px;
+            font-weight: 700;
+        }
+        .manifesto-box {
+            background: #161b22;
+            padding: 40px;
+            border-radius: 16px;
+            border-left: 6px solid #58a6ff;
+            font-style: italic;
+            font-size: 1.25rem;
+            color: #c9d1d9;
+            margin: 40px 0;
+            line-height: 2.1;
+            white-space: pre-line;
+            box-shadow: inset 0 3px 10px rgba(0,0,0,0.6);
+            border-top: 1px solid #30363d;
+            border-right: 1px solid #30363d;
+            border-bottom: 1px solid #30363d;
+        }
+        h2 {
+            color: #58a6ff;
+            font-size: 1.7rem;
+            margin-top: 45px;
+            margin-bottom: 18px;
+            border-bottom: 1px solid #21262d;
+            padding-bottom: 10px;
+        }
+        p, li { color: #8b949e; font-size: 1.15rem; margin-bottom: 18px; }
+        ul { padding-left: 20px; margin-bottom: 30px; }
+        strong { color: #f0f6fc; }
+        .footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #484f58;
+            border-top: 1px solid #21262d;
+            padding-top: 25px;
+        }
+        @media (max-width: 768px) {
+            .container { padding: 25px; margin: 10px; }
+            h1 { font-size: 2.3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Furkan Kutay Çağanay</h1>
+        <div class="tagline">Yenilmez Ferdi Ekol | Millî Yüzücü & 2028 Olimpiyat Adayı</div>
+
+        <p>Sistemin kalıplarına boyun eğmeyen, kulvarın çizgisinde değil kendi iradesinde yarışan; devlet bilinci ve çelikten disiplinle 2028 Los Angeles Olimpiyatları'na yürüyen bağımsız sporcunun kilitlenmiş dijital kalesi.</p>
+
+        <!-- YENİLMEZ ŞİİRSEL SAVUNU -->
+        <div class="manifesto-box">
+            Su, boyun eğmez kimseye, yalnızca çarpan yüreğe tanık,
+            Kendi yolunu çizen ferdi bir neferdir, adı Furkan Kutay Çağanay'lık.
+            Kulvarda takım aranmaz, orada yalnız irade ve hamle var,
+            50 metre serbest ve kelebekte, saniyelerle yarışır bu çelik rüzgar.
+
+            Geçmişte devlet makamında sarsılmaz bir vicdan,
+            Bugün havuzun ortasında parlayan saf bir meydan.
+            Calisthenics ile gerilen kaslar, Wing Chun ile bilenmiş refleks,
+            Olimpiyat yolunda tek başına, ne bir duraksama ne bir nefes!
+        </div>
+
+        <h2>Stratejik Altyapı ve Nizam</h2>
+        <ul>
+            <li><strong>Millî Miras:</strong> Gençlerbirliği ve Hacettepeliler Spor Kulübü geçmişiyle ulusal arenada bayrağı gururla taşımış millî sporcu kimliği.</li>
+            <li><strong>Ferdi İstiklâl:</strong> Hiçbir kulüp zincirine takılmadan, tamamen bağımsız (ferdi) lisansıyla kendi rekorlarını kendi elleriyle yazan elit sprint ekolü.</li>
+            <li><strong>Hibrit Antrenman:</strong> Yüzme havuzunu calisthenics, atletik patlayıcılık ve dövüş sanatlarının (Wing Chun) disipliniyle birleştiren yenilmez ekosistem.</li>
+        </ul>
+
+        <h2>Devlet Bilinci ve Karakter</h2>
+        <p>Cumhurbaşkanlığı makamına bağlı yürütülen kritik başkanlık vazifelerinde edinilen devlet terbiyesi; bu sporu sadece bir yarış olarak değil, ülkenin bayrağını en tepeye dikme misyonu olarak görmeyi emretmiştir. Bu nizamdan taviz verilmez.</p>
+
+        <div class="footer">
+            &copy; 2026 Furkan Kutay Çağanay | Yenilmez Ferdi Atletizm ve Yüzme Nizamı. Tüm hakları saklıdır.
+        </div>
+    </div>
+
+</body>
+</html>
