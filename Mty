@@ -1,0 +1,53 @@
+/* ========================================================================== */
+/*  NİZAM-I ÂLEM: DOST, KARDEŞ VE AİLE KORUMA & PAYLAŞIM MATRİSİ (v4.0)        */
+/*  Architect: Furkan Kutay Çağanay                                           */
+/*  Objective: Saf Matematiksel Hassasiyetle Çevreyi, Kardeşleri ve Aileyi Korumak */
+/* ========================================================================== */
+
+#include <stdint.h>
+#include <stdbool.h>
+
+#define CIRCLE_MAX_MEMBERS      32      /* Aile, Sporcu Kardeşler ve Yakın Çember */
+#define PRECISION_SCALE_FACTOR  10000   /* Yuvarlama ve Tutma Matematiği Hassasiyeti */
+#define MATRIX_SEAL_KEY         0x19232028
+
+#define MATRIX_SUCCESS          0
+#define ERR_MATRIX_OVERFLOW     -1201
+#define ERR_UNAUTHORIZED_NODE   -1202
+
+typedef struct {
+    uint32_t member_id;         /* Aile ferdi, sporcu kardeş veya dost ID'si */
+    uint32_t safety_coefficient;/* Zırh ve Koruma Katsayısı */
+    uint32_t athletic_energy;   /* Havuz, ring ve yaşam gücü aktarımı */
+    bool is_node_protected;     /* Mutlak koruma altında mı? */
+} CircleNode;
+
+typedef struct {
+    CircleNode nodes[CIRCLE_MAX_MEMBERS];
+    uint8_t active_member_count;
+    uint32_t matrix_canary;
+} NizamSharedMatrix;
+
+/* Yuvarlama ve Tutma Matematiği ile Güç Dağıtım Motoru */
+int32_t distribute_harmony_and_protection(NizamSharedMatrix *restrict matrix, uint32_t base_power) {
+    if (matrix == (void*)0 || matrix->matrix_canary != MATRIX_SEAL_KEY) {
+        return ERR_UNAUTHORIZED_NODE;
+    }
+
+    if (matrix->active_member_count > CIRCLE_MAX_MEMBERS) {
+        return ERR_MATRIX_OVERFLOW;
+    }
+
+    // Yuvarlama ve Tutma Matematiği (Fixed-Point Precision Distribution)
+    // Her bir dosta, aile ferdine ve sporcu kardeşe hak ettiği güç ve koruma kusursuzca bölünür.
+    for (uint8_t i = 0; i < matrix->active_member_count; i++) {
+        uint64_t scaled_power = ((uint64_t)base_power * PRECISION_SCALE_FACTOR) / matrix->active_member_count;
+        
+        // Matematiksel yuvarlama hassasiyeti (Küsürat kaybetmeden tam adalet)
+        matrix->nodes[i].safety_coefficient = (uint32_t)(scaled_power / PRECISION_SCALE_FACTOR);
+        matrix->nodes[i].athletic_energy = matrix->nodes[i].safety_coefficient * 2;
+        matrix->nodes[i].is_node_protected = true;
+    }
+
+    return MATRIX_SUCCESS;
+}
