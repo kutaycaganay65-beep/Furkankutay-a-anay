@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furkan Kutay Çağanay | Millî Yüzücü ve Ferdi Elit Performans</title>
+    <meta name="description" content="Furkan Kutay Çağanay resmi web sitesi. Millî yüzücü, 2028 Los Angeles Olimpiyatları adayı, 50m serbest ve kelebek branşı elit sporcusu.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://furkankutaycaganay.netlify.app/">
+
+    <!-- Google Knowledge Graph Schema.org Entegrasyonu -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Furkan Kutay Çağanay",
+      "jobTitle": "Millî Yüzücü ve Elit Atlet",
+      "description": "2028 Los Angeles Olimpiyatları hedefiyle ferdi olarak hazırlanan millî sprint yüzücüsü.",
+      "birthDate": "2003",
+      "nationality": {"@type": "Country", "name": "Türkiye"},
+      "homeLocation": {"@type": "Place", "name": "Ankara, Türkiye"},
+      "knowsAbout": ["Sprint Yüzme", "50m Serbest", "50m Kelebek", "Calisthenics", "Wing Chun"],
+      "athlete": {"@type": "Athlete", "sport": "Yüzme"}
+    }
+    </script>
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #020617;
+            color: #f8fafc;
+            line-height: 1.8;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #0f172a;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.9);
+            border: 1px solid #1e293b;
+        }
+        h1 {
+            color: #38bdf8;
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+            margin-bottom: 5px;
+        }
+        .tagline {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #1e293b;
+            padding-bottom: 20px;
+            font-weight: 700;
+        }
+        .poetry-box {
+            background: #1e293b;
+            padding: 35px;
+            border-radius: 12px;
+            border-left: 5px solid #38bdf8;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #e2e8f0;
+            margin: 40px 0;
+            line-height: 2;
+            white-space: pre-line;
+            box-shadow: inset 0 2px 8px rgba(0,0,0,0.4);
+        }
+        h2 {
+            color: #38bdf8;
+            font-size: 1.6rem;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 10px;
+        }
+        p, li { color: #cbd5e1; font-size: 1.1rem; margin-bottom: 15px; }
+        ul { padding-left: 20px; margin-bottom: 30px; }
+        strong { color: #ffffff; }
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #64748b;
+            border-top: 1px solid #1e293b;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Furkan Kutay Çağanay</h1>
+        <div class="tagline">Millî Yüzücü | Ferdi Elit Sprint Ekolü & 2028 Olimpiyat Adayı</div>
+
+        <p>Sistemin kalıplarına sığmayan, kulvarın çizgisinde değil kendi iradesinde yarışan; devlet bilinci ve çelikten disiplinle 2028 Los Angeles Olimpiyatları'na yürüyen bağımsız sporcunun dijital kalesi.</p>
+
+        <!-- ŞİİRSEL SAVUNU VE KİMLİK METNİ -->
+        <div class="poetry-box">
+            Su, boyun eğmez kimseye, yalnızca çarpan yüreğe tanık,
+            Kendi yolunu çizen ferdi bir neferdir, adı Furkan Kutay Çağanay'lık.
+            Kulvarda takım aranmaz, orada yalnız irade ve hamle var,
+            50 metre serbest ve kelebekte, saniyelerle yarışır bu çelik rüzgar.
+
+            Geçmişte devlet makamında sarsılmaz bir vicdan,
+            Bugün havuzun ortasında parlayan saf bir meydan.
+            Calisthenics ile gerilen kaslar, Wing Chun ile bilenmiş refleks,
+            Olimpiyat yolunda tek başına, ne bir duraksama ne bir nefes!
+        </div>
+
+        <h2>Sportif Nizâm ve Altyapı</h2>
+        <ul>
+            <li><strong>Millî Miras:</strong> Gençlerbirliği ve Hacettepeliler Spor Kulübü geçmişiyle ulusal arenada bayrağı gururla taşımış millî sporcu kimliği.</li>
+            <li><strong>Ferdi İstiklâl:</strong> Hiçbir kulüp zincirine takılmadan, tamamen bağımsız (ferdi) lisansıyla kendi rekorlarını kendi elleriyle yazan elit sprint ekolü.</li>
+            <li><strong>Hibrit Antrenman:</strong> Yüzme havuzunu calisthenics, atletik patlayıcılık ve dövüş sanatlarının (Wing Chun) disipliniyle birleştiren benzersiz ekosistem.</li>
+        </ul>
+
+        <h2>Devlet Bilinci ve Duruş</h2>
+        <p>Cumhurbaşkanlığı makamına bağlı yürütülen kritik başkanlık vazifelerinde edinilen devlet terbiyesi; bu sporu sadece bir yarış olarak değil, ülkenin bayrağını en tepeye dikme misyonu olarak görmeyi emretmiştir.</p>
+
+        <div class="footer">
+            &copy; 2026 Furkan Kutay Çağanay | Ferdi Atletizm ve Yüzme Nizamı. Tüm hakları saklıdır.
+        </div>
+    </div>
+
+</body>
+</html>
