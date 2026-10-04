@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furkan Kutay Çağanay | Savunma Mimarisi & Saf İrade</title>
+    <meta name="description" content="Furkan Kutay Çağanay resmi dijital kalesi. Sıfır açık kuralı, izole sistem programlama mimarisi, Pi hassasiyeti ve 2028 Olimpiyat vizyonu.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://furkankutaycaganay.netlify.app/">
+
+    <!-- Google Knowledge Graph Schema.org Resmi Veri Yapısı -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Furkan Kutay Çağanay",
+      "jobTitle": "Sistem Güvenliği Mimarı ve Millî Sporcu",
+      "description": "Savunma sanayii standartlarında sıfır bağımlılık ve sıfır açık prensipleriyle kodlama yapan, 2028 Olimpiyatları hedefli elit sporcu.",
+      "birthDate": "2003",
+      "nationality": {"@type": "Country", "name": "Türkiye"},
+      "homeLocation": {"@type": "Place", "name": "Ankara, Türkiye"},
+      "knowsAbout": ["Sistem Mimarisi", "Siber Güvenlik", "Pi Sayısı Hesaplama", "Sprint Yüzme", "Elit Disiplin Nizamı"],
+      "athlete": {"@type": "Athlete", "sport": "Yüzme"}
+    }
+    </script>
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #020617;
+            color: #f8fafc;
+            line-height: 1.9;
+            padding: 30px 20px;
+        }
+        .container {
+            max-width: 950px;
+            margin: 40px auto;
+            background: #0f172a;
+            padding: 70px 60px;
+            border-radius: 20px;
+            box-shadow: 0 35px 70px rgba(0,0,0,0.85);
+            border: 1px solid #1e293b;
+        }
+        header {
+            border-bottom: 2px solid #1e293b;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+        h1 {
+            color: #38bdf8;
+            font-size: 3.2rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+        }
+        .tagline {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+        section {
+            margin-bottom: 45px;
+        }
+        h2 {
+            color: #38bdf8;
+            font-size: 1.6rem;
+            margin-bottom: 18px;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+        p, li {
+            color: #cbd5e1;
+            font-size: 1.15rem;
+            margin-bottom: 16px;
+        }
+        strong {
+            color: #ffffff;
+        }
+        pre {
+            background: #020617;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            color: #38bdf8;
+            font-family: monospace;
+            font-size: 1rem;
+            overflow-x: auto;
+            margin: 25px 0;
+            line-height: 1.6;
+        }
+        .security-badge {
+            background: #065f46;
+            color: #6ee7b7;
+            padding: 8px 16px;
+            border-radius: 6px;
+            display: inline-block;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            border: 1px solid #047857;
+        }
+        .interactive-box {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            margin: 30px 0;
+            text-align: center;
+        }
+        button {
+            background: #38bdf8;
+            color: #020617;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #7dd3fc;
+        }
+        .output-pi {
+            font-family: monospace;
+            font-size: 1.15rem;
+            color: #38bdf8;
+            margin-top: 15px;
+            word-break: break-all;
+        }
+        .manifesto-box {
+            background: #1e293b;
+            padding: 35px;
+            border-radius: 12px;
+            border-left: 6px solid #38bdf8;
+            font-size: 1.2rem;
+            color: #e2e8f0;
+            margin: 40px 0;
+            line-height: 2;
+            font-style: italic;
+        }
+        .footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #64748b;
+            border-top: 1px solid #1e293b;
+            padding-top: 25px;
+        }
+        @media (max-width: 768px) {
+            .container { padding: 35px 25px; margin: 15px; }
+            h1 { font-size: 2.2rem; }
+            .tagline { font-size: 0.95rem; letter-spacing: 1px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Furkan Kutay Çağanay</h1>
+            <div class="tagline">Savunma Mimarisi | Saf İrade & Sıfır Açık Nizamı</div>
+        </header>
+
+        <section>
+            <div class="security-badge">&#128737; SİSTEM DURUMU: %100 İZOLE VE SIFIR BAĞIMLILIK</div>
+            <p>Dışarıdan veri çekmeyen, veritabanı barındırmayan, savunma sanayii ve sistem programlama standartlarına tam uyumlu kilitli dijital kale manifestosudur.</p>
+        </section>
+
+        <section>
+            <h2>Güvenli Pi Sayısı Hesaplama Motoru</h2>
+            <p>Aşağıdaki motor, harici hiçbir kütüphaneye yaslanmadan tamamen tarayıcı içinde iteratif olarak kusursuz matematik hesaplaması yapar.</p>
+            
+            <div class="interactive-box">
+                <p>İterasyon Hassasiyeti: <strong id="iterCount">1000</strong></p>
+                <input type="range" id="slider" min="10" max="50000" step="100" value="1000" style="width: 100%; accent-color: #38bdf8; margin: 15px 0;">
+                <button onclick="calculatePi()">Pi Değerini Hesapla</button>
+                <div class="output-pi" id="piOutput">3.141592...</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Sistem Mimarisi ve Çekirdek Kodu</h2>
+            <p>Hata kabul etmeyen, saf mantıkla örülmüş izole kod bloğu:</p>
+            <pre><code>// İzole ve Güvenli Pi Hesaplama Çekirdeği
+function hesaplaGuvenliPi(adim) {
+    let pi = 0.0, isaret = 1.0;
+    for (let i = 0; i < adim; i++) {
+        pi += isaret / (2 * i + 1);
+        isaret *= -1.0;
+    }
+    return pi * 4;
+}
+console.log("Güvenli Pi Mührü Aktif:", hesaplaGuvenliPi(10000));
+</code></pre>
+        </section>
+
+        <section>
+            <h2>Savunma Sanayii ve Olimpik Vizyon</h2>
+            <p>Su kulvarındaki patlayıcı sprint gücü, dövüş sanatlarındaki refleks kinematiği ve yazılımdaki bu tavizsiz güvenlik anlayışı tek bir amaca hizmet eder: En üst düzeyde kusursuzluk.</p>
+        </section>
+
+        <div class="manifesto-box">
+            "Nasıl ki Pi sayısı evrenin çarklarını kusursuz bir matematikle döndürüyorsa; insan da kendi iradesini, kodunu ve hedeflerini aynı şaşmaz hassasiyetle örmelidir."
+        </div>
+
+        <div class="footer">
+            &copy; 2026 Furkan Kutay Çağanay. Tüm hakları saklıdır. Zırhlı Sistem Portresi.
+        </div>
+    </div>
+
+    <script>
+        function calculatePi() {
+            const steps = parseInt(document.getElementById('slider').value);
+            document.getElementById('iterCount').innerText = steps;
+            let pi = 0.0;
+            let sign = 1.0;
+            for (let i = 0; i < steps; i++) {
+                pi += sign / (2 * i + 1);
+                sign *= -1.0;
+            }
+            pi *= 4;
+            document.getElementById('piOutput').innerText = "Korumalı Sonuç (&pi;): " + pi.toFixed(10);
+        }
+        document.getElementById('slider').addEventListener('input', calculatePi);
+        calculatePi();
+    </script>
+
+</body>
+</html>
