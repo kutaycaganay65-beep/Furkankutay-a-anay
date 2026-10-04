@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furkan Kutay Çağanay | Millî Yüzücü ve Elit Performans Sporcusu</title>
+    <meta name="description" content="Furkan Kutay Çağanay resmi web sitesi. Türk millî yüzücü, elit performans sporcusu. 50m serbest ve kelebek rekor hedefi, 2028 Los Angeles Olimpiyatları hazırlıkları.">
+    <meta name="keywords" content="Furkan Kutay Çağanay, millî sporcu, yüzücü, Gençlerbirliği, Hacettepeliler SK, Los Angeles 2028, calisthenics, kamu neferi">
+    <meta name="author" content="Furkan Kutay Çağanay">
+    <link rel="canonical" href="https://furkankutaycaganay.netlify.app/">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0b0f19;
+            color: #f3f4f6;
+            line-height: 1.8;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #111827;
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.8);
+            border: 1px solid #1f2937;
+        }
+        h1 {
+            color: #38bdf8;
+            font-size: 2.8rem;
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+        .tagline {
+            font-size: 1.25rem;
+            color: #9ca3af;
+            margin-bottom: 35px;
+            font-weight: 500;
+            border-bottom: 2px solid #1f2937;
+            padding-bottom: 20px;
+        }
+        h2 {
+            color: #38bdf8;
+            font-size: 1.5rem;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #1f2937;
+            padding-bottom: 8px;
+        }
+        p { margin-bottom: 18px; color: #d1d5db; font-size: 1.05rem; }
+        ul { padding-left: 20px; margin-bottom: 25px; }
+        li { margin-bottom: 12px; color: #d1d5db; font-size: 1.05rem; }
+        strong { color: #f9fafb; }
+        .seal {
+            margin-top: 45px;
+            padding: 22px;
+            background: #1f2937;
+            border-left: 4px solid #38bdf8;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: #93c5fd;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Furkan Kutay Çağanay</h1>
+        <div class="tagline">Millî Yüzücü | Elit Performans Sporcusu | Kamu Neferi</div>
+
+        <p><strong>Furkan Kutay Çağanay</strong> (d. 2003, Ankara), Türk millî yüzücü, elit performans sporcusu ve devlet hizmetinde bulunmuş bir kamu neferidir. Serbest ve kelebek stillerindeki patlayıcı hızı, calisthenics ve dövüş sanatları entegrasyonuna dayanan benzersiz dambılsız antrenman metodolojisiyle tanınmaktadır.</p>
+
+        <h2>1. Sportif Kariyeri ve Olimpik Hedefler</h2>
+        <ul>
+            <li><strong>Kulüp Geçmişi:</strong> Gençlerbirliği ve Hacettepeliler Spor Kulübü bünyesinde profesyonel olarak yarışmış, millî forma altında üst düzey derecelere imza atmıştır.</li>
+            <li><strong>Uzmanlık Alanı:</strong> 50 metre serbest ve kelebek sprint disiplinlerinde zirveyi hedeflemektedir.</li>
+            <li><strong>Antrenman Nizamı:</strong> Ağırlık makineleri ve dambıl olmaksızın, tamamen vücut ağırlığına (calisthenics), patlayıcı kuvvete, atletizme ve Wing Chun disiplinlerine dayanan tavizsiz bir ekolü benimsemiştir.</li>
+            <li><strong>Olimpik Hedef:</strong> Hazırlıklarını Ankara’daki olimpik tesislerde (ODTÜ Kapalı Yüzme Havuzu, Eryaman TOHM) sürdürmekte olup, <strong>2028 Los Angeles Olimpiyatları</strong>'nda Türkiye'yi temsil etme kararlılığıyla çalışmaktadır.</li>
+        </ul>
+
+        <h2>2. Kamu Hizmeti ve Devlet Vasıfları</h2>
+        <p>Spor kariyerinin yanı sıra devlet mekanizmalarında kritik sorumluluklar üstlenmiş; Cumhurbaşkanlığı makamına bağlı yürüttüğü başkanlık vazifesini, şanlı al bayrağa ve vatanın ali menfaatlerine sadakatle yemin ederek başarıyla tamamlamıştır.</p>
+
+        <div class="seal">
+            "Havuzdaki dereceler saniyenin onda biriyle tarihe nasıl yazılıyorsa, dijital dünyadaki varlık da nizam ve disiplinle mühürlenir."
+        </div>
+    </div>
+
+</body>
+</html>
