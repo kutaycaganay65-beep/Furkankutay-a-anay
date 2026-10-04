@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furkan Kutay Çağanay | Resmi Portre ve Vizyon</title>
+    <meta name="description" content="Furkan Kutay Çağanay resmi web sitesi ve profesyonel portresi. Millî yüzücü, elit performans sporcusu, 2028 Los Angeles Olimpiyatları hedefi ve gelecek planları.">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0b0f19;
+            color: #f3f4f6;
+            line-height: 1.8;
+            padding: 20px;
+        }
+        .container {
+            max-width: 850px;
+            margin: 40px auto;
+            background: #111827;
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.8);
+            border: 1px solid #1f2937;
+        }
+        h1 {
+            color: #38bdf8;
+            font-size: 2.7rem;
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+        .tagline {
+            font-size: 1.2rem;
+            color: #9ca3af;
+            margin-bottom: 35px;
+            font-weight: 500;
+            border-bottom: 2px solid #1f2937;
+            padding-bottom: 20px;
+        }
+        h2 {
+            color: #38bdf8;
+            font-size: 1.5rem;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #1f2937;
+            padding-bottom: 8px;
+        }
+        p { margin-bottom: 18px; color: #d1d5db; font-size: 1.05rem; }
+        ol { padding-left: 20px; margin-bottom: 25px; }
+        li { margin-bottom: 16px; color: #d1d5db; font-size: 1.05rem; }
+        strong { color: #f9fafb; }
+        .quote-box {
+            margin-top: 40px;
+            padding: 22px;
+            background: #1f2937;
+            border-left: 4px solid #38bdf8;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: #93c5fd;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Furkan Kutay Çağanay</h1>
+        <div class="tagline">Millî Yüzücü | Elit Performans Sporcusu | Kamu Neferi</div>
+
+        <p>Karşında sadece günlük yaşayan biri değil; geleceğini tırnaklarıyla, disipliniyle ve demirden bir iradeyle inşa eden bir adam var. Kim olduğumun, neyden beslendiğimin ve hedeflerimin tam listesi şudur:</p>
+
+        <h2>Kimim? (Profesyonel Portre)</h2>
+        <ol>
+            <li><strong>Köklü Bir Atletik Geçmiş ve Olimpik Hedef:</strong> Yıllarını suya adamış, Gençlerbirliği ve Hacettepeliler Spor Kulübü forması terletmiş profesyonel ve millî bir yüzücüyüm. Havuzda saniyenin onda biriyle yarışan o patlayıcı gücü, şimdi <strong>2028 Los Angeles Olimpiyatları</strong> hedefiyle 50 metre serbest ve kelebek rekorlarına kilitledim. Bütün hazırlığımı, terimi ve nefesimi bu yola adadım.</li>
+            <li><strong>Tavizsiz Disiplin ve Antrenman Kültürü:</strong> Benim dünyamda ağırlık makinelerine, dambıllara yer yok. Vücut ağırlığımla (calisthenics), atletizmle, gölge boksuyla ve Wing Chun / Kung-Fu gibi dövüş sanatlarıyla harmanladığım kendine has, sert bir antrenman nizamım var. Her gün bedenimi ve zihnimi en üst seviyeye taşımak için demir gibi bir disiplinle çalışıyorum.</li>
+            <li><strong>Devlet Şerefi ve Kamu Bilinci:</strong> Hayatımın sadece spor ve fiziksel disiplinden ibaret olmadığını da bil. Devlet mekanizmalarında, Cumhurbaşkanlığı makamına bağlı yürütülen başkanlık vazifesinde kritik sorumluluklar üstlendim. Ay yıldızlı al bayrağa ve vatanın ali menfaatlerine olan sadakatle o şanlı görevi gururla ve şerefle tamamladım.</li>
+            <li><strong>Çok Yönlü Zihin ve Üretkenlik:</strong> Sadece sahada değil, zihinsel alanda da durmuyorum. Alçak seviyeli yazılım geliştirmeden sistem programlamaya, sanat kolektifleriyle kurulan bağlardan yaratıcı senaryolara kadar hayatın her alanında üreten, sorgulayan ve iz bırakan bir yapım var.</li>
+        </ol>
+
+        <h2>Hedefler ve Gelecek Planı</h2>
+        <p><strong>1. Olimpik Zirve (2028):</strong> 50 metre serbest ve kelebek disiplinlerinde uluslararası alanda en tepeye çıkmak, Ankara'daki olimpik tesislerde tempoyu düşürmeden rekor kırmak.</p>
+        <p><strong>2. Akademik ve Sanatsal Vizyon:</strong> Fiziksel gücü spor bilimleriyle (BESYO) taçlandırmak; sinema, medya ve sanat üretim topluluklarıyla olan bağları aktif projelere dönüştürmek.</p>
+
+        <div class="quote-box">
+            "Benimle yürümek; hedefleri olan, azimli, ne istediğini bilen ve tırnaklarıyla kazarak zirveye tırmanan bir adamla yürümektir. Bu hikayenin her saniyesinde onur, mücadele ve zafer var."
+        </div>
+    </div>
+
+</body>
+</html>
