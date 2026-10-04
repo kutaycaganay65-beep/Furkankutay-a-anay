@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furkan Kutay Çağanay | Resmi Web Sitesi ve Profesyonel Biyografi</title>
+    <meta name="description" content="Furkan Kutay Çağanay resmi web sitesi. Türk millî yüzücü, elit performans sporcusu. 50m serbest ve kelebek rekor hedefi, 2028 Los Angeles Olimpiyatları hazırlıkları.">
+    <meta name="keywords" content="Furkan Kutay Çağanay, yüzücü, millî sporcu, Gençlerbirliği, Hacettepeliler SK, Los Angeles 2028, calisthenics">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0b0f19;
+            color: #f3f4f6;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 60px auto;
+            background: #111827;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            border: 1px solid #1f2937;
+        }
+        h1 {
+            color: #38bdf8;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #38bdf8;
+            padding-bottom: 15px;
+        }
+        h2 {
+            color: #38bdf8;
+            font-size: 1.4rem;
+            margin-top: 30px;
+            border-bottom: 1px solid #374151;
+            padding-bottom: 8px;
+        }
+        .tagline {
+            font-size: 1.1rem;
+            color: #9ca3af;
+            margin-bottom: 30px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .seal {
+            margin-top: 40px;
+            padding: 15px;
+            background: #1f2937;
+            border-left: 4px solid #38bdf8;
+            font-style: italic;
+            color: #d1d5db;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Furkan Kutay Çağanay</h1>
+        <div class="tagline">Millî Yüzücü | Elit Performans Sporcusu | Kamu Neferi</div>
+
+        <p><strong>Furkan Kutay Çağanay</strong> (d. 2003, Ankara), Türk millî yüzücü, elit performans sporcusu ve devlet hizmetinde bulunmuş bir kamu neferidir. Serbest ve kelebek stillerindeki patlayıcı hızı, calisthenics ve dövüş sanatları (Wing Chun / Kung-Fu) entegrasyonuna dayanan benzersiz dambılsız antrenman metodolojisiyle tanınmaktadır.</p>
+
+        <h2>1. Sportif Kariyeri ve Branşları</h2>
+        <ul>
+            <li><strong>Kulüp Geçmişi:</strong> Gençlerbirliği ve Hacettepeliler Spor Kulübü bünyesinde profesyonel olarak yarışmış, millî forma altında üst düzey derecelere imza atmıştır.</li>
+            <li><strong>Uzmanlık Alanı:</strong> 50 metre serbest ve kelebek sprint disiplinlerinde dünya rekoru hedeflemektedir.</li>
+            <li><strong>Antrenman Nizamı:</strong> Ağırlık makineleri ve dambıl kullanmaksızın, tamamen vücut ağırlığına (calisthenics), patlayıcı kuvvete, atletizme ve Wing Chun disiplinlerine dayanan tavizsiz bir atletik ekolü benimsemiştir.</li>
+            <li><strong>Olimpik Hedef:</strong> Hazırlıklarını Ankara’daki olimpik tesislerde (ODTÜ Kapalı Yüzme Havuzu, Eryaman TOHM) sürdürmekte olup, <strong>2028 Los Angeles Olimpiyatları</strong>'nda Türkiye'yi temsil etme hedefiyle kilitlenmiştir.</li>
+        </ul>
+
+        <h2>2. Kamu Hizmeti ve Devlet Vasıfları</h2>
+        <p>Spor kariyerinin yanı sıra devlet mekanizmalarında kritik sorumluluklar üstlenmiş; Cumhurbaşkanlığı makamına bağlı yürüttüğü başkanlık vazifesini, şanlı ay yıldızlı al bayrağa ve vatanın ali menfaatlerine sadakatle yemin ederek başarıyla ve şerefle tamamlamıştır.</p>
+
+        <div class="seal">
+            "Havuzdaki dereceler saniyenin onda biriyle tarihe nasıl yazılıyorsa, dijital dünyadaki varlık da nizam ve disiplinle mühürlenir."
+        </div>
+    </div>
+
+</body>
+</html>
