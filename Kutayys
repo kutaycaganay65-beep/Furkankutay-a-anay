@@ -1,0 +1,93 @@
+/* ========================================================================== */
+/*  NİZAM-I ÂLEM: ANTI-HACKER & INTRUSION PREVENTION KERNEL (v2.0-SHIELD)      */
+/*  Architect: Furkan Kutay Çağanay                                           */
+/*  Standard: Zero-Trust, Constant-Time Validation, Exploit Mitigation        */
+/* ========================================================================== */
+
+#include <stdint.h>
+#include <stdbool.h>
+
+/* --- 1. SİBER SAVUNMA VE SALDIRI ÖNLEME SABİTLERİ --- */
+#define MAX_PACKET_LIMIT        128
+#define THRESHOLD_VIOLATION     5     /* Maksimum hatalı deneme sınırı */
+
+/* Siber Tehdit ve Hata Kodları */
+#define SHIELD_SUCCESS          0
+#define ERR_NULL_POINTER        -501
+#define ERR_BUFFER_OVERFLOW     -502  /* Stack/Buffer Smashing Denetimi */
+#define ERR_TIMING_ATTACK       -503  /* Yan Kanal (Side-Channel) Koruması */
+#define ERR_INTRUSION_DETECTED  -504  /* Yetkisiz Sızma / Brute-Force Engellendi */
+#define ERR_SYSTEM_LOCKED       -505  /* Sistem Kendini Kilitledi (Fail-Safe) */
+
+/* Donanım Güvenlik Register Simülasyonu */
+#define MEMORY_BARRIER_REG      ((volatile uint32_t*) 0x70003000)
+#define FIREWALL_STATUS_REG     ((volatile uint32_t*) 0x70003004)
+#define HARDWARE_LOCKDOWN_REG   ((volatile uint32_t*) 0x70003008)
+
+/* --- 2. ZIRHLI AĞ VE VERİ PAKETİ YAPISI --- */
+typedef struct {
+    uint32_t source_ip_hash;
+    uint8_t payload[MAX_PACKET_LIMIT];
+    uint16_t packet_size;
+    uint32_t magic_canary;      /* Buffer Overflow (Canary) Koruma Baytı */
+} NetworkShieldPacket;
+
+/* Siber Savunma Durum Yöneticisi */
+typedef struct {
+    uint8_t violation_counter;
+    bool is_system_locked;
+    uint32_t active_canary_token;
+} FirewallContext;
+
+static FirewallContext g_firewall = {
+    .violation_counter = 0,
+    .is_system_locked = false,
+    .active_canary_token = 0xDEADC0DE
+};
+
+/* --- 3. SABİT ZAMANLI (CONSTANT-TIME) GÜVENLİK KONTROLÜ --- */
+/* Timing attack (zaman analizi) açıklarını kapatmak için sabit döngü */
+static inline bool secure_memcmp(const uint8_t *restrict a, const uint8_t *restrict b, uint16_t size) {
+    volatile uint8_t result = 0;
+    for (uint16_t i = 0; i < MAX_PACKET_LIMIT; i++) {
+        if (i < size) {
+            result |= (a[i] ^ b[i]);
+        }
+    }
+    return (result == 0);
+}
+
+/* --- 4. ZIRHLI SİBER SALDIRI ÖNLEME MOTORU --- */
+int32_t inspect_and_defend(const NetworkShieldPacket *restrict packet) {
+    // 1. Sistem Kilitliyse Hiçbir Girişe İzin Verilmez (Fail-Safe)
+    if (g_firewall.is_system_locked) {
+        return ERR_SYSTEM_LOCKED;
+    }
+
+    // 2. Null Pointer ve Bellek Adresi Saldırıları Koruması
+    if (packet == (void*)0 || MEMORY_BARRIER_REG == (void*)0) {
+        g_firewall.violation_counter++;
+        return ERR_NULL_POINTER;
+    }
+
+    // 3. Buffer Overflow & Stack Smashing Koruması (Canary Kontrolü)
+    if (packet->magic_canary != g_firewall.active_canary_token) {
+        g_firewall.violation_counter++;
+        return ERR_BUFFER_OVERFLOW;
+    }
+
+    // 4. Sınır Denetimi (Out-of-Bounds / Overflow Önleme)
+    if (packet->packet_size > MAX_PACKET_LIMIT || packet->packet_size == 0) {
+        g_firewall.violation_counter++;
+        return ERR_BUFFER_OVERFLOW;
+    }
+
+    // 5. Brute-Force / Sızma Girişimi Sınırı
+    if (g_firewall.violation_counter >= THRESHOLD_VIOLATION) {
+        g_firewall.is_system_locked = true;
+        *HARDWARE_LOCKDOWN_REG = 0xFFFFFFFF; /* Donanım seviyesinde panzer kilit */
+        return ERR_INTRUSION_DETECTED;
+    }
+
+    return SHIELD_SUCCESS;
+}
