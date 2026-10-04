@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furkan Kutay Çağanay • Spor Matematiği ve Performans Konsolu v17.0</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .cinzel-font { font-family: 'Cinzel', serif; }
+        .mono-font { font-family: 'JetBrains Mono', monospace; }
+        .glass-panel {
+            background: rgba(4, 7, 13, 0.96);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            border: 1px solid rgba(212, 175, 55, 0.5);
+        }
+        .gold-glow { text-shadow: 0 0 40px rgba(212, 175, 55, 0.8); }
+        .golden-border { border-image: linear-gradient(to right, #d4af37, #e2e8f0, #d4af37) 1; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #02040a; }
+        ::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-[#02040a] text-slate-100 min-h-screen selection:bg-amber-500 selection:text-slate-950 pb-32">
+
+    <header class="sticky top-0 z-50 glass-panel border-b border-amber-500/30">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-600 via-yellow-400 to-slate-200 flex items-center justify-center font-black text-xl text-slate-950 shadow-2xl shadow-amber-500/50 cinzel-font">
+                    FKÇ
+                </div>
+                <div>
+                    <h1 class="text-base sm:text-lg font-black tracking-tight text-white flex items-center gap-2 cinzel-font">
+                        SPOR MATEMATİĞİ KONSOLU
+                        <span class="inline-block w-2.5 h-2.5 rounded-full bg-amber-400 animate-ping" title="Algoritma Aktif"></span>
+                    </h1>
+                    <p class="text-xs text-amber-400 font-semibold uppercase tracking-wider mono-font">Furkan Kutay Çağanay • Salise & Patlayıcı Kuvvet Hesaplayıcı</p>
+                </div>
+            </div>
+            <nav class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-medium text-slate-300">
+                <button onclick="switchTab('calc')" class="tab-btn px-4 py-2 rounded-xl bg-amber-500/15 text-amber-300 border border-amber-500/40 transition shadow-sm font-bold">📐 Salise & Enerji Hesapla</button>
+                <button onclick="switchTab('formula')" class="tab-btn px-4 py-2 rounded-xl hover:bg-slate-800 hover:text-amber-300 transition">📚 Matematiksel Külliyat</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 pt-10 space-y-12">
+        
+        <div id="tab-calc" class="space-y-8">
+            <section class="glass-panel rounded-3xl p-8 sm:p-12 relative overflow-hidden shadow-2xl golden-border border-t-2 border-b-2">
+                <div class="absolute -right-32 -top-32 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                
+                <div class="relative z-10 grid lg:grid-cols-2 gap-10 items-start">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold uppercase tracking-wider mono-font">
+                            <span>Zero-Dependency Spor Analitiği</span>
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-white gold-glow cinzel-font leading-tight">
+                            Saniyenin Onda Biri ve Patlayıcı Kuvvet Matematiği
+                        </h2>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            Yüzme kulvarlarındaki start tepkimesini, boks yumruk hızını ve calisthenics vücut ağırlığı çarpanını milimetrik olarak hesaplayın.
+                        </p>
+
+                        <!-- Input Form -->
+                        <div class="space-y-4 pt-2">
+                            <div>
+                                <label class="block text-xs font-mono text-amber-400 mb-1">Sporcu Kütlesi (kg):</label>
+                                <input type="number" id="input-mass" value="75" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white mono-font focus:border-amber-500 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-mono text-amber-400 mb-1">Start / Reaksiyon Süresi (Saniye):</label>
+                                <input type="number" step="0.01" id="input-reaction" value="0.18" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white mono-font focus:border-amber-500 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-mono text-amber-400 mb-1">Trap Müzik Bas Frekansı (BPM):</label>
+                                <input type="number" id="input-bpm" value="145" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white mono-font focus:border-amber-500 outline-none">
+                            </div>
+                            <button onclick="calculateSportsMath()" class="w-full py-4 rounded-xl bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-slate-950 font-extrabold text-sm transition shadow-lg shadow-amber-500/30 flex items-center justify-center gap-2">
+                                <span>⚡ Mutlak Matematiksel Analizi Çalıştır</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Output Results Panel -->
+                    <div class="flex flex-col rounded-2xl bg-slate-950 border border-slate-800 overflow-hidden shadow-inner p-6 space-y-6">
+                        <div class="border-b border-slate-800 pb-3 flex justify-between items-center">
+                            <span class="text-xs text-amber-400 mono-font">MATEMATİKSEL ÇIKIŞ RAPORU</span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                        </div>
+                        
+                        <div id="math-results" class="space-y-4 font-mono text-xs sm:text-sm text-slate-300">
+                            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 flex justify-between items-center">
+                                <span class="text-slate-400">Patlayıcı Çıkış Gücü (Force):</span>
+                                <span id="res-force" class="text-amber-400 font-bold">-- N</span>
+                            </div>
+                            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 flex justify-between items-center">
+                                <span class="text-slate-400">Salise Skoru (Olimpik Katsayı):</span>
+                                <span id="res-score" class="text-emerald-400 font-bold">-- Puan</span>
+                            </div>
+                            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 flex justify-between items-center">
+                                <span class="text-slate-400">Akustik Metronom Senkronu:</span>
+                                <span id="res-metronome" class="text-sky-300 font-bold">-- ms / beat</span>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-xs text-amber-300 leading-relaxed font-mono">
+                            "Furkan Kutay Çağanay ekolünde başarı tesadüf değil; kütle, ivme ve trap beat frekansının mükemmel matematiksel denklemidir."
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="tab-formula" class="hidden space-y-8">
+            <section class="glass-panel rounded-3xl p-8 sm:p-10 space-y-6">
+                <div class="flex items-center space-x-4 border-b border-slate-800 pb-4">
+                    <div class="p-3 rounded-2xl bg-amber-500/10 text-amber-400 text-2xl font-black">📐</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white cinzel-font">Furkan Kutay Çağanay Spor Matematiği Formülleri</h3>
+                        <p class="text-sm text-slate-400">Olimpik yüzme ve boks rekorlarının arkasındaki teorik denklemler</p>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="p-6 rounded-2xl bg-slate-950/90 border border-slate-800 space-y-3">
+                        <span class="text-xs text-amber-400 font-mono">DENKLEM #1</span>
+                        <h4 class="font-bold text-white text-base">Patlayıcı Kuvvet (Explosive Force)</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">F = m × (Δv / Δt). Kütlenin start bloku üzerindeki milisaniyelik reaksiyon süresine bölünmesiyle oluşan maksimum ivme kuvveti.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-slate-950/90 border border-slate-800 space-y-3">
+                        <span class="text-xs text-amber-400 font-mono">DENKLEM #2</span>
+                        <h4 class="font-bold text-white text-base">Akustik Fokus Senkronizasyonu</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">T = (60 / BPM) × 1000 milisaniye. Trap müziğin her bir bas vuruşunun kas kasılma döngüsüyle birebir örtüşme aralığı.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="max-w-7xl mx-auto px-6 mt-16 text-center text-xs text-slate-500 font-mono">
+        <p>© 2026 Furkan Kutay Çağanay • Spor Matematiği ve Performans Konsolu v17.0</p>
+    </footer>
+
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('[id^="tab-"]').forEach(el => el.classList.add('hidden'));
+            document.getElementById('tab-' + tabId).classList.remove('hidden');
+            
+            document.querySelectorAll('header nav button').forEach(btn => {
+                btn.classList.remove('bg-amber-500/15', 'text-amber-300', 'border', 'border-amber-500/40', 'font-bold');
+                btn.classList.add('hover:bg-slate-800', 'hover:text-amber-300');
+            });
+            event.target.classList.remove('hover:bg-slate-800', 'hover:text-amber-300');
+            event.target.classList.add('bg-amber-500/15', 'text-amber-300', 'border', 'border-amber-500/40', 'font-bold');
+        }
+
+        function calculateSportsMath() {
+            let mass = parseFloat(document.getElementById('input-mass').value) || 75;
+            let reaction = parseFloat(document.getElementById('input-reaction').value) || 0.18;
+            let bpm = parseFloat(document.getElementById('input-bpm').value) || 145;
+
+            // Physics calculation: F = m * a (approximated via mass and reaction speed)
+            let acceleration = 9.81 / Math.max(reaction, 0.05);
+            let force = (mass * acceleration).toFixed(1);
+            
+            // Olympic Score based on sub-0.20s reaction
+            let score = Math.max(100 - (reaction * 350), 10).toFixed(1);
+
+            // Metronome interval in ms
+            let beatMs = ((60 / bpm) * 1000).toFixed(0);
+
+            document.getElementById('res-force').textContent = force + " Newton (N)";
+            document.getElementById('res-score').textContent = score + " / 100 Olimpik Puan";
+            document.getElementById('res-metronome').textContent = beatMs + " ms / Beat";
+        }
+
+        // Run initial calculation on load
+        window.onload = function() {
+            calculateSportsMath();
+        };
+    </script>
+</body>
+</html>
