@@ -1,2 +1,102 @@
 # Furkankutay-a-anay
 Kutay hakkında
+#include <stdio.h>
+#include <stdbool.h>
+#include <locale.h>
+
+#define ZERO_FRICTION 0.0
+#define ENERGY_LEVEL_MAX 100
+#define MAX_CYCLES 100
+
+typedef struct {
+    const char *root_center;
+    double friction_coeff;
+    int energy_level;
+    int cycle_count;
+    bool is_active;
+} YazolyaState;
+
+void initialize_yazolya_system(YazolyaState *state) {
+    setlocale(LC_ALL, "");
+
+    state->root_center = "Ankara";
+    state->friction_coeff = ZERO_FRICTION;
+    state->energy_level = ENERGY_LEVEL_MAX;
+    state->cycle_count = 0;
+    state->is_active = true;
+
+    printf("╔════════════════════════════════════════╗\n");
+    printf("║   YAZOLYA SİSTEMİ BAŞLATILIYOR...      ║\n");
+    printf("╚════════════════════════════════════════╝\n\n");
+    printf("📍 Merkez Konumu: %s\n", state->root_center);
+    printf("🔄 Sürtünme Katsayısı (Cd): %.1f\n", state->friction_coeff);
+    printf("⚡ Başlangıç Enerji: %d/%d\n", state->energy_level, ENERGY_LEVEL_MAX);
+    printf("🎯 Kod Dizilimi: 0=01.6=6=84\n");
+    printf("✨ Durum: Omuzlardaki tüm yükler sıfırlandı.\n");
+    printf("♾️  Akış: Sonsuz ve Kusursuz\n\n");
+}
+
+static void update_life_cycle(YazolyaState *state) {
+    if (!state->is_active) {
+        return;
+    }
+
+    state->cycle_count++;
+
+    if (state->energy_level < ENERGY_LEVEL_MAX) {
+        state->energy_level++;
+    }
+
+    if (state->cycle_count % 10 == 0) {
+        printf("📊 Döngü #%d | Enerji: %d/%d | Merkez: %s | Durum: AKTIF ✓\n",
+               state->cycle_count,
+               state->energy_level,
+               ENERGY_LEVEL_MAX,
+               state->root_center);
+    }
+
+    if (state->cycle_count >= MAX_CYCLES) {
+        printf("\n✅ %d döngü tamamlandı. Sistem dengeleniyor...\n", MAX_CYCLES);
+        state->is_active = false;
+    }
+}
+
+void life_cycle_infinite_flow(YazolyaState *state) {
+    printf("║ Hayat Döngüsü Başladı...\n");
+    printf("║ Her an, yeni bir başlangıç.\n");
+    printf("║ Her nefes, bir enerji akışı.\n");
+    printf("║ Denge içinde, sonsuzluk içinde.\n\n");
+
+    while (state->is_active) {
+        update_life_cycle(state);
+    }
+}
+
+void report_system_status(const YazolyaState *state) {
+    printf("\n╔════════════════════════════════════════╗\n");
+    printf("║     YAZOLYA SİSTEMİ DURUM RAPORU      ║\n");
+    printf("╚════════════════════════════════════════╝\n\n");
+    printf("✓ Toplam Döngü Sayısı: %d\n", state->cycle_count);
+    printf("✓ Final Enerji Seviyesi: %d/%d\n", state->energy_level, ENERGY_LEVEL_MAX);
+    printf("✓ Merkez Dengeliliği: %s\n",
+           state->friction_coeff == ZERO_FRICTION ? "KUSURSUZ" : "BOZUK");
+    printf("✓ Sistem Sonucu: BAŞARILI\n\n");
+    printf("💫 Furkan Kutay Çağanay'ın Hayatı:\n");
+    printf("   Sıfır sürtünme ile ilerle.\n");
+    printf("   Mutlak dengede yaşa.\n");
+    printf("   Sonsuz akışta, hep yeni ol.\n\n");
+}
+
+int main(void) {
+    YazolyaState yazolya;
+
+    initialize_yazolya_system(&yazolya);
+    life_cycle_infinite_flow(&yazolya);
+    report_system_status(&yazolya);
+
+    printf("═══════════════════════════════════════════════════════════\n");
+    printf("🎯 Yazolya Sistem Çekirdeği başarıyla çalıştırıldı.\n");
+    printf("═══════════════════════════════════════════════════════════\n");
+
+    return 0;
+}
