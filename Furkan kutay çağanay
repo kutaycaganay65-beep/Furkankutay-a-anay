@@ -1,0 +1,115 @@
+/* 
+ * Yazolya Sistem Çekirdeği - master_os.c
+ * Kod Sahibi: Furkan Kutay Çağanay
+ * Kod Kriteri: 0=01.6=6=84 (Sıfır Sürtünme ve Mutlak Denge Devrimi)
+ * 
+ * Açıklama:
+ * Hayat, sürekli akış içinde yüzen bir sistemdir.
+ * Sürtünmeden arınmış, merkezinde denge taşıyan,
+ * her an yenilenen bir enerji döngüsüdür.
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+/* Sistem Sabitleri */
+#define ZERO_FRICTION 0.0
+#define ANKARA_ROOT 1
+#define ENERGY_LEVEL_MAX 100
+#define CYCLE_DURATION 1
+
+/* Yazolya Sistem Durumu */
+typedef struct {
+    int root_center;           /* Merkez kök */
+    double friction_coeff;     /* Sürtünme katsayısı */
+    int energy_level;          /* Enerji seviyesi */
+    int cycle_count;           /* Döngü sayacı */
+    int is_active;             /* Sistem aktiflik durumu */
+} YazoslyaState;
+
+/* Sistem Başlatma */
+void initialize_yazolya_system(YazoslyaState *state) {
+    state->root_center = ANKARA_ROOT;
+    state->friction_coeff = ZERO_FRICTION;
+    state->energy_level = ENERGY_LEVEL_MAX;
+    state->cycle_count = 0;
+    state->is_active = 1;
+    
+    printf("╔════════════════════════════════════════╗\n");
+    printf("║   YAZOLYA SİSTEMİ BAŞLATILIYOR...      ║\n");
+    printf("╚════════════════════════════════════════╝\n\n");
+    printf("📍 Merkez Konumu: Ankara [Kök: %d]\n", state->root_center);
+    printf("🔄 Sürtünme Katsayısı (Cd): %.1f\n", state->friction_coeff);
+    printf("⚡ Başlangıç Enerji: %d/100\n", state->energy_level);
+    printf("🎯 Kod Dizilimi: 0=01.6=6=84\n");
+    printf("✨ Durum: Omuzlardaki tüm yükler sıfırlandı.\n");
+    printf("♾️  Akış: Sonsuz ve Kusursuz\n\n");
+}
+
+/* Hayat Döngüsü - Sonsuz Akış */
+void life_cycle_infinite_flow(YazoslyaState *state) {
+    printf("║ Hayat Döngüsü Başladı...\n");
+    printf("║ Her an, yeni bir başlangıç.\n");
+    printf("║ Her nefes, bir enerji akışı.\n");
+    printf("║ Denge içinde, sonsuzluk içinde.\n\n");
+    
+    while (state->is_active) {
+        state->cycle_count++;
+        
+        /* Enerji Döngüsü */
+        if (state->energy_level > 0) {
+            state->energy_level = (state->energy_level + state->friction_coeff >= ENERGY_LEVEL_MAX) 
+                                   ? ENERGY_LEVEL_MAX 
+                                   : state->energy_level;
+        }
+        
+        /* Her Döngüde Durum */
+        if (state->cycle_count % 10 == 0) {
+            printf("📊 Döngü #%d | Enerji: %d/100 | Merkez: %s | Durum: AKTIF ✓\n",
+                   state->cycle_count, 
+                   state->energy_level,
+                   "Ankara");
+        }
+        
+        /* Simülasyon için kontrollü sonlandırma */
+        if (state->cycle_count >= 100) {
+            printf("\n✅ 100 döngü tamamlandı. Sistem dengeleniyor...\n");
+            state->is_active = 0;
+        }
+    }
+}
+
+/* Sistem Durumu Raporu */
+void report_system_status(YazoslyaState *state) {
+    printf("\n╔════════════════════════════════════════╗\n");
+    printf("║     YAZOLYA SİSTEMİ DURUM RAPORU      ║\n");
+    printf("╚════════════════════════════════════════╝\n\n");
+    printf("✓ Toplam Döngü Sayısı: %d\n", state->cycle_count);
+    printf("✓ Final Enerji Seviyesi: %d/100\n", state->energy_level);
+    printf("✓ Merkez Dengeliliği: %s\n", state->friction_coeff == ZERO_FRICTION ? "KUSURSUZ" : "BOZUK");
+    printf("✓ Sistem Sonucu: BAŞARILI\n\n");
+    printf("💫 Furkan Kutay Çağanay'ın Hayatı:\n");
+    printf("   Sıfır sürtünme ile ilerle.\n");
+    printf("   Mutlak dengede yaşa.\n");
+    printf("   Sonsuz akışta, hep yeni ol.\n\n");
+}
+
+int main() {
+    YazoslyaState yazolya;
+    
+    /* Sistem Başlat */
+    initialize_yazolya_system(&yazolya);
+    
+    /* Hayat Döngüsü */
+    life_cycle_infinite_flow(&yazolya);
+    
+    /* Durum Raporu */
+    report_system_status(&yazolya);
+    
+    printf("═══════════════════════════════════════════════════════════\n");
+    printf("🎯 Yazolya Sistem Çekirdeği başarıyla çalıştırıldı.\n");
+    printf("═══════════════════════════════════════════════════════════\n");
+    
+    return 0;
+}
