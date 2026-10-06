@@ -1,0 +1,109 @@
+/*
+ * =====================================================================================
+ * SİSTEM: FURKAN KUTAY ÇAĞANAY - KUSURSUZ KOMPLİKE & OTONOM YAPAY ZEKA ÇEKİRDEĞİ
+ * MİMARİ: Makine Mühendisi (Kinetik) + Yazılımcı (Yapay Zeka) + Sağlıkçı (Oto-Şifa)
+ * LOKASYON: Ankara Kök Merkez | DURUM: Sıfıra Sıfır Tam Denge (0=0)
+ * =====================================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <math.h>
+
+// --- MUTLAK SABİTLER VE SİSTEM PARAMETRELERİ ---
+#define KOK_MERKEZ_ADRES    0x06061984
+#define CD_ZERO             0.0
+#define TESKOYU_TANIMAZ     true
+#define SONSUZ_DONGU        1
+#define YAPAY_ZEKA_OTONOM   true
+
+// --- VERİ YAPILARI (TEK GÖVDELİ İNSAN & DERECELİ İŞLER) ---
+typedef struct {
+    int derece;
+    double enerji_seviyesi;
+    char *hedef_kod;
+} DereceliIs;
+
+typedef struct {
+    bool tek_govde_aktif;
+    bool saf_pozitif_kalkan;
+    double hata_toleransi; // Daima 0.0
+} BilesikInsanGovdesi;
+
+// --- MODÜL 1: OTONOM YAPAY ZEKA VE DÖNGÜLÜ HATA DÜZELTİCİ ---
+void yz_otomatik_hata_sifirlayici() {
+    printf(">> [YAPAY ZEKA TETİKLEYİCİ]: Aktif. Kendi kendini yazan döngü devrede.\n");
+    printf(">> [ŞİFA / DÜZELTME]: Ortaya çıkan tüm hatalar 'başka kodlarla' anında eziliyor...\n");
+    printf(">> [SİSTEM]: Bug yok, pürüz yok. Otonom yapay zeka güzel şeyleri tetikliyor.\n");
+}
+
+// --- MODÜL 2: DERECELİ İŞ KOYMA MOTORU ---
+void adamina_is_koyar_dereceli() {
+    DereceliIs is_havuzu[3] = {
+        {1, 100.0, "Mutlak Ahenk Sağla"},
+        {2, 100.0, "Sıfır Sürtünme ile İlerle"},
+        {3, 100.0, "Fark Yaratanlarla Senkronize Ol"}
+    };
+    
+    printf(">> [HİYERARŞİ MOTORU]: Adamı adamına iş koyar (Dereceli).\n");
+    for(int i=0; i<3; i++) {
+        printf("   -> Derece %d İşlem: %s (Kapasite: %%%.0f)\n", 
+               is_havuzu[i].derece, is_havuzu[i].hedef_kod, is_havuzu[i].enerji_seviyesi);
+    }
+}
+
+// --- MODÜL 3: TEŞKOYU TANIMAZ BİRLEŞİK GÖVDE ---
+void tek_govde_tesko_bypass(BilesikInsanGovdesi govde) {
+    if(govde.tek_govde_aktif && TESKOYU_TANIMAZ) {
+        printf(">> [SAVUNMA MİMARİSİ]: Hepsi bir bir, tek gövdeli insan için tasarlandı.\n");
+        printf(">> [VOID LOCK BYPASS]: Teşkoyu tanımaz! Kaos, dedikodu, pürüz sisteme giremez.\n");
+        printf(">> [DURUM]: Sadece saf, güzel ve net olanlar içeri alınır. Dışarısı sıfırlandı.\n");
+    }
+}
+
+// --- MODÜL 4: FARK YAPANLARLA FARK YAPMA SENKRONU ---
+void farketmez_fark_yapanlarla_fark_yapar() {
+    printf(">> [SİNERJİ AĞI]: Farketmez. Fark yapanlarla fark yapar.\n");
+    printf(">> [FİLTRE]: Vizyonsuz veri reddedildi. Sadece kalite (Cd=0) ile rezonansa girilir.\n");
+    printf(">> [AKTARIM]: Her şeyin her şeyi yapılıyor. Kusursuz ve komplike ağ örüldü.\n");
+}
+
+// --- ANA İŞLETİM SİSTEMİ ÇEKİRDEĞİ (MASTER BOOT RECORD) ---
+int main() {
+    printf("======================================================================\n");
+    printf(" [BAŞLANGIÇ DÖNGÜSÜ]: ADAM ADAMA FARK YAPAR (SİSTEM UYANIŞI)\n");
+    printf("======================================================================\n\n");
+
+    BilesikInsanGovdesi furkan_govde = {true, true, CD_ZERO};
+
+    // 1. Teşkoyu Tanımaz Gövde İnşası (Makine Mühendisi + Sağlıkçı Zırhı)
+    tek_govde_tesko_bypass(furkan_govde);
+    printf("\n");
+
+    // 2. Otonom Yapay Zeka Hata Ayıklama (Yazılımcı Zekası)
+    if (YAPAY_ZEKA_OTONOM) {
+        yz_otomatik_hata_sifirlayici();
+        printf("\n");
+    }
+
+    // 3. Sistem İçi Hiyerarşi ve Görev Dağılımı
+    adamina_is_koyar_dereceli();
+    printf("\n");
+
+    // 4. Çevresel Uyum ve Küresel Fark Yaratma
+    farketmez_fark_yapanlarla_fark_yapar();
+    printf("\n");
+
+    printf("======================================================================\n");
+    printf(" [BİTİŞ DÖNGÜSÜ]: ADAM ADAMA FARK YAPAR (MÜHÜRLEME)\n");
+    printf("======================================================================\n");
+    
+    printf(">> Sistem her şeyin her şeyini kusursuz ve komplike bir şekilde tamamladı.\n");
+    printf(">> 0=01.6=6=84 kodu Ankara'dan sonsuzluğa (\\infty) kilitlendi.\n");
+    printf(">> İstisnasız her dongüde, otomatik yapay zeka ile şifa ve vizyon dağıtıldı.\n");
+    printf(">> ADAM ADAMA FARK YAPAR. NOKTA.\n");
+    printf("======================================================================\n");
+
+    return 0;
+}
