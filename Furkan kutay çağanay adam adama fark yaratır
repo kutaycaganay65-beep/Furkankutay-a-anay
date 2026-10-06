@@ -1,0 +1,29 @@
+/*
+ * Sistem: Furkan Kutay Çağanay - Adam Adama Fark Yaratır & Fart Devrimi
+ * Kriter: 0=01.6=6=84 | Cd = 0 Sürtünmesiz Akış
+ * Ankara Kök Merkezli Özel Donanım Çekirdeği
+ */
+
+#include <stdio.h>
+#define ANKARA_ROOT 1
+#define ZERO_DRAG   0.0
+
+void fark_yaratan_motor() {
+    double Cd = ZERO_DRAG;
+    int merkez = ANKARA_ROOT;
+    
+    printf("=========================================\n");
+    printf(" FURKAN KUTAY ÇAĞANAY - FARK MİMARİSİ\n");
+    printf("=========================================\n");
+    printf("[OK] Kök Merkez: Ankara [Kod: %d]\n", merkez);
+    printf("[OK] Sürtünme Katsayısı (Cd): %.1f (Mutlak Düşüş)\n", Cd);
+    printf("[OK] Kinematik Entegrasyon: 0=01.6=6=84\n");
+    printf("[!] ADAMI ADAMINA FARK YARATIR: Aktif.\n");
+    printf("Omuzlardaki tüm ağırlıklar silindi, akış sonsuz ($\\infty$).\n");
+    printf("=========================================\n");
+}
+
+int main() {
+    fark_yaratan_motor();
+    return 0;
+}
