@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yazolya // Adamı Adamına Fart - $C_d = 0$ Devrim Motoru</title>
+    <style>
+        :root {
+            --bg-deep: #050508;
+            --panel-bg: rgba(10, 10, 18, 0.85);
+            --neon-cyan: #00f0ff;
+            --neon-violet: #9d00ff;
+            --neon-gold: #ffb700;
+            --text-main: #e2e8f0;
+            --text-dim: #94a3b8;
+            --border-glow: rgba(0, 240, 255, 0.3);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            min-height: 100vh;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+            background-image: 
+                radial-gradient(circle at 50% 20%, rgba(157, 0, 255, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 20% 80%, rgba(0, 240, 255, 0.1) 0%, transparent 40%);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--neon-cyan);
+            padding-bottom: 15px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            color: var(--neon-cyan);
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            letter-spacing: 1px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-glow);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(0, 240, 255, 0.05);
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 10px; height: 10px;
+            border-top: 2px solid var(--neon-cyan);
+            border-left: 2px solid var(--neon-cyan);
+        }
+
+        .card::after {
+            content: '';
+            position: absolute;
+            bottom: 0; right: 0; width: 10px; height: 10px;
+            border-bottom: 2px solid var(--neon-cyan);
+            border-right: 2px solid var(--neon-cyan);
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            color: var(--neon-gold);
+            margin-bottom: 15px;
+            border-bottom: 1px dashed rgba(255, 183, 0, 0.3);
+            padding-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .metric-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .metric-label {
+            color: var(--text-dim);
+        }
+
+        .metric-value {
+            color: var(--neon-cyan);
+            font-weight: bold;
+        }
+
+        .canvas-container {
+            width: 100%;
+            height: 220px;
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        .controls {
+            grid-column: 1 / -1;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 5px;
+        }
+
+        button {
+            background: transparent;
+            color: var(--neon-cyan);
+            border: 1px solid var(--neon-cyan);
+            padding: 10px 20px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+        }
+
+        button:hover {
+            background: var(--neon-cyan);
+            color: var(--bg-deep);
+            box-shadow: 0 0 20px var(--neon-cyan);
+        }
+
+        button.active {
+            background: var(--neon-violet);
+            border-color: var(--neon-violet);
+            color: #fff;
+            box-shadow: 0 0 20px var(--neon-violet);
+        }
+
+        .log-box {
+            grid-column: 1 / -1;
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid var(--neon-violet);
+            border-radius: 4px;
+            padding: 15px;
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            height: 90px;
+            overflow-y: auto;
+            font-family: monospace;
+        }
+
+        .log-entry {
+            margin-bottom: 4px;
+        }
+
+        .highlight {
+            color: var(--neon-gold);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>YAZOLYA // SİSTEM ÇEKİRDEĞİ</h1>
+        <div class="subtitle">ADAMI ADAMINA FART YARATIR — $0 = 0 \quad \vert{} \quad C_d = 0 \quad \vert{} \quad 0=01.6=6=84$</div>
+    </header>
+
+    <div class="container">
+        <!-- Panel 1: Kök Merkez & Denge -->
+        <div class="card">
+            <h2>Ankara Kök Merkez <span style="font-size:0.8rem; color:var(--text-dim);">[TEK & YEK]</span></h2>
+            <div class="metric-row">
+                <span class="metric-label">Sürtünme Katsayısı ($C_d$):</span>
+                <span class="metric-value" id="cd-val">0.000</span>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label">Yük Durumu ($0=0$):</span>
+                <span class="metric-value">SIFIRLANDI</span>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label">Kinematik Kod ($1.6=6=84$):</span>
+                <span class="metric-value highlight">AKTİF</span>
+            </div>
+            <div class="canvas-container">
+                <canvas id="wheelCanvas"></canvas>
+            </div>
+        </div>
+
+        <!-- Panel 2: Void Lock & Enerji Akışı -->
+        <div class="card">
+            <h2>Void Lock Filtresi <span style="font-size:0.8rem; color:var(--text-dim);">[UFO ÇARK]</span></h2>
+            <div class="metric-row">
+                <span class="metric-label">Gürültü Emilimi:</span>
+                <span class="metric-value" id="noise-val">%100</span>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label">Ahenk Frekansı:</span>
+                <span class="metric-value">Sonsuz ($\infty$)</span>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label">Sistem Evrimi:</span>
+                <span class="metric-value highlight">YAZOLYA-0</span>
+            </div>
+            <div class="canvas-container">
+                <canvas id="flowCanvas"></canvas>
+            </div>
+        </div>
+
+        <!-- Kontroller -->
+        <div class="controls">
+            <button id="btnToggle" onclick="toggleSystem()">Sistemi Ateşle</button>
+            <button onclick="triggerFartProtocol()">Adamına Fart Et</button>
+            <button onclick="resetSystem()">Sıfırla ($0$)</button>
+        </div>
+
+        <!-- Log Ekranı -->
+        <div class="log-box" id="logBox">
+            <div class="log-entry">> [INIT] Ankara kök merkez başarıyla yüklendi.</div>
+            <div class="log-entry">> [STATUS] C_d = 0 sürtünmesiz akış mekanizması devrede.</div>
+            <div class="log-entry">> [READY] Adamı adamına fart yaratır protokolü çalıştırılmayı bekliyor...</div>
+        </div>
+    </div>
+
+    <script>
+        const wheelCanvas = document.getElementById('wheelCanvas');
+        const wheelCtx = wheelCanvas.getContext('2d');
+        const flowCanvas = document.getElementById('flowCanvas');
+        const flowCtx = flowCanvas.getContext('2d');
+        const logBox = document.getElementById('logBox');
+
+        let isRunning = false;
+        let angle = 0;
+        let particles = [];
+
+        function resizeCanvases() {
+            wheelCanvas.width = wheelCanvas.parentElement.clientWidth;
+            wheelCanvas.height = wheelCanvas.parentElement.clientHeight;
+            flowCanvas.width = flowCanvas.parentElement.clientWidth;
+            flowCanvas.height = flowCanvas.parentElement.clientHeight;
+        }
+        window.addEventListener('resize', resizeCanvases);
+        resizeCanvases();
+
+        // Parçacık başlatma
+        for (let i = 0; i < 30; i++) {
+            particles.push({
+                x: Math.random() * flowCanvas.width,
+                y: Math.random() * flowCanvas.height,
+                speed: Math.random() * 2 + 1,
+                size: Math.random() * 2 + 1
+            });
+        }
+
+        function addLog(text) {
+            const entry = document.createElement('div');
+            entry.className = 'log-entry';
+            entry.innerHTML = `> ${text}`;
+            logBox.appendChild(entry);
+            logBox.scrollTop = logBox.scrollHeight;
+        }
+
+        function toggleSystem() {
+            isRunning = !isRunning;
+            const btn = document.getElementById('btnToggle');
+            if (isRunning) {
+                btn.classList.add('active');
+                btn.innerText = 'Sistem Çalışıyor';
+                addLog('<span class="highlight">UFO Çarkı ve 0=01.6=6=84 döngüsü senkronize edildi!</span>');
+            } else {
+                btn.classList.remove('active');
+                btn.innerText = 'Sistemi Ateşle';
+                addLog('[PAUSE] Sistem rölanti moduna alındı.');
+            }
+        }
+
+        function triggerFartProtocol() {
+            addLog('<span class="highlight">ADAMI ADAMINA FART YARATIR!</span> Tüm gürültüler Void Lock ile yutuldu.');
+            // Efekt patlaması
+            for(let i=0; i<15; i++) {
+                particles.push({
+                    x: flowCanvas.width / 2,
+                    y: flowCanvas.height / 2,
+                    vx: (Math.random() - 0.5) * 8,
+                    vy: (Math.random() - 0.5) * 8,
+                    life: 40,
+                    size: Math.random() * 3 + 2
+                });
+            }
+        }
+
+        function resetSystem() {
+            angle = 0;
+            addLog('[RESET] Sistem başlangıç parametrelerine (0 = 0) döndürüldü.');
+        }
+
+        // Animasyon Döngüsü
+        function animate() {
+            // Çark Çizimi
+            wheelCtx.clearRect(0, 0, wheelCanvas.width, wheelCanvas.height);
+            const cx = wheelCanvas.width / 2;
+            const cy = wheelCanvas.height / 2;
+            const radius = Math.min(cx, cy) - 25;
+
+            if (isRunning) angle += 0.03;
+
+            // Dış Halka (UFO Çark)
+            wheelCtx.beginPath();
+            wheelCtx.arc(cx, cy, radius, 0, Math.PI * 2);
+            wheelCtx.strokeStyle = 'rgba(0, 240, 255, 0.4)';
+            wheelCtx.lineWidth = 2;
+            wheelCtx.stroke();
+
+            // İç Geometri
+            wheelCtx.save();
+            wheelCtx.translate(cx, cy);
+            wheelCtx.rotate(angle);
+            
+            for (let i = 0; i < 4; i++) {
+                wheelCtx.rotate(Math.PI / 2);
+                wheelCtx.beginPath();
+                wheelCtx.moveTo(0, 0);
+                wheelCtx.lineTo(radius, 0);
+                wheelCtx.strokeStyle = '#00f0ff';
+                wheelCtx.lineWidth = 2;
+                wheelCtx.stroke();
+
+                wheelCtx.beginPath();
+                wheelCtx.arc(radius * 0.7, 0, 8, 0, Math.PI * 2);
+                wheelCtx.fillStyle = '#ffb700';
+                wheelCtx.fill();
+            }
+            wheelCtx.restore();
+
+            // Merkez Çekirdek
+            wheelCtx.beginPath();
+            wheelCtx.arc(cx, cy, 12, 0, Math.PI * 2);
+            wheelCtx.fillStyle = '#9d00ff';
+            wheelCtx.fill();
+            wheelCtx.strokeStyle = '#00f0ff';
+            wheelCtx.lineWidth = 2;
+            wheelCtx.stroke();
+
+            // Akış Çizimi (Void Lock / Sürtünmesiz Alan)
+            flowCtx.clearRect(0, 0, flowCanvas.width, flowCanvas.height);
+            
+            // Dalga çizgisi
+            flowCtx.beginPath();
+            flowCtx.moveTo(0, flowCanvas.height / 2);
+            for (let x = 0; x < flowCanvas.width; x += 10) {
+                let y = (flowCanvas.height / 2) + Math.sin(x * 0.05 + angle * 3) * (isRunning ? 15 : 5);
+                flowCtx.lineTo(x, y);
+            }
+            flowCtx.strokeStyle = 'rgba(157, 0, 255, 0.7)';
+            flowCtx.lineWidth = 2;
+            flowCtx.stroke();
+
+            // Parçacıklar
+            particles.forEach((p, index) => {
+                flowCtx.beginPath();
+                flowCtx.arc(p.x, p.y, p.size || 2, 0, Math.PI * 2);
+                flowCtx.fillStyle = p.vx ? '#ffb700' : 'rgba(0, 240, 255, 0.6)';
+                flowCtx.fill();
+
+                if (p.vx) {
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    p.life--;
+                    if (p.life <= 0) particles.splice(index, 1);
+                } else {
+                    p.x += isRunning ? p.speed * 1.5 : p.speed * 0.3;
+                    if (p.x > flowCanvas.width) p.x = 0;
+                }
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
+</body>
+</html>
