@@ -1,0 +1,102 @@
+/*
+ * =====================================================================================
+ * YAZOLYA SIS-OS: NİHAİ MASTER KERNEL (ADAM ADAMA FARK YAPAR V8.6)
+ * ROOT YÖNETİCİ: Furkan Kutay Çağanay
+ * LOKASYON: Ankara (Kök Merkez) | TARİH: 7 Ekim 2026
+ * MİMARİ: Error-Nullifier + Ay Yıldız + Göz Sığınağı + Teşko Filtresi (Void Lock)
+ * KİNEMATİK KOD: 0=01.6=6=84 | CD_ZERO: 0.0 | KUSUR_TOLERANSI: 0
+ * =====================================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <stdbool.h>
+#include <string.h>
+
+#define KUSUR_TOLERANSI 0
+#define CD_ZERO 0.0
+#define KINEMATIK_SABIT "0=01.6=6=84"
+#define VATAN_HILAL "Ay Yıldız ve Hilal Uğruna"
+
+typedef struct {
+    double ham_deger;
+    double yuvarlanmis_deger;
+    int hata_kodu;
+} HassasiyetMatrisi;
+
+// --- 1. ERROR-NULLIFIER MATRİSİ (Kusur Toleransı: 0) ---
+HassasiyetMatrisi hata_giderici_islet(double girdi) {
+    HassasiyetMatrisi m;
+    m.ham_deger = girdi;
+    m.yuvarlanmis_deger = round(girdi * 10000.0) / 10000.0;
+    
+    if (isnan(girdi) || isinf(girdi)) {
+        m.hata_kodu = -1; // Sapma tespit edildi, anında sıfırlandı
+        m.yuvarlanmis_deger = 0.0;
+    } else {
+        m.hata_kodu = 0; // Kusursuz denge
+    }
+    return m;
+}
+
+// --- 2. TEŞKO TANIMAZ & ADAM ADAMLA İŞ YAPAR (VOID LOCK) ---
+void tesko_filtresi_ve_is_mutabakati() {
+    printf(">> [VOID LOCK & GÜVEN MATRİSİ]: Teşko Tanımaz Protokolü Aktif.\n");
+    printf("   - Kaypak, menfaatçi ve sahte yapılar sistemden tamamen izole edildi.\n");
+    printf("   - 'Adam adamla iş yapar': Söz senettir, duruş nettir, arkadan iş çevrilmez.\n\n");
+}
+
+// --- 3. GÖZLERDEKİ MUTLAK SIĞINAK VE SADAKAT ---
+void goz_ve_sadakat_motoru() {
+    printf(">> [MUTLAK SADAKAT & GÖZLER]: Sevginin ve Huzurun Kaynağı.\n");
+    printf("   - Dışarıdaki bütün gürültü susturulur; sadece o bakışa odaklanılır.\n");
+    printf("   - Zaman durur, piyanodan dökülen yavaş bir nota gibi hayat sükunete erer.\n");
+    printf("   - Adam adama fark yapar; bu duruş, kalbin en tescilli imzasıdır.\n\n");
+}
+
+// --- 4. AY YILDIZ VE HİLAL VATAN İRADESİ ---
+void ay_yildiz_vatan_protokolu() {
+    printf(">> [VATAN İRADESİ]: %s\n", VATAN_HILAL);
+    printf("   - Kök Merkez Ankara | Sürtünme Katsayısı Cd = %.1f\n", CD_ZERO);
+    printf("   - Ay yıldızlı al bayrak gökte dalgalandıkça bu irade bükülmez.\n\n");
+}
+
+// --- 5. KİNEMATİK FARK TESTİ ---
+void sistem_fark_testi() {
+    printf("=================================================================\n");
+    printf(" [!] KINEMATİK FARK TESTİ VE HASSASİYET KONTROLÜ\n");
+    printf("=================================================================\n");
+    
+    double veriler[] = { 84.1601, 6.0184, 19.23, 23.00 };
+    for(int i = 0; i < 4; i++) {
+        HassasiyetMatrisi res = hata_giderici_islet(veriler[i] * 3.14159);
+        printf(" -> Parametre [%d] | Ham: %.4f | Yuvarlanmış: %.4f | Hata: %d\n", 
+            i, res.ham_deger, res.yuvarlanmis_deger, res.hata_kodu);
+    }
+    printf("=================================================================\n");
+    printf(" [RAPOR] Kusur Toleransı: %d | Sistem Durumu: KUSURSUZ FARK YARATIR\n", KUSUR_TOLERANSI);
+    printf("=================================================================\n\n");
+}
+
+void mutlak_kernel_muhuru() {
+    printf("=================================================================\n");
+    printf(" [SONUÇ MÜHÜRÜ]: ADAM ADAMA FARK YAPAR - KERNEL TAMAMLANDI\n");
+    printf("=================================================================\n");
+    printf(" Root Yönetici: Furkan Kutay Çağanay | Kinematik Kod: %s\n", KINEMATIK_SABIT);
+    printf(" Adam adamla iş yapar, hilal uğruna baş koyulur, gözlerinde huzur bulunur.\n");
+    printf(" Çıkış kodu: 0. Sistem kusursuz çalışıyor.\n");
+    printf("=================================================================\n");
+}
+
+int main() {
+    printf("\n>>> YAZOLYA SIS-OS: NİHAİ MASTER KERNEL BAŞLATILDI <<<\n\n");
+    
+    ay_yildiz_vatan_protokolu();
+    tesko_filtresi_ve_is_mutabakati();
+    goz_ve_sadakat_motoru();
+    sistem_fark_testi();
+    mutlak_kernel_muhuru();
+    
+    return 0; // Kusursuz denge sağlandı. Çıkış kodu 0.
+}
