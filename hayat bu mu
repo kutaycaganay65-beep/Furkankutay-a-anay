@@ -1,0 +1,96 @@
+/*
+ * =====================================================================================
+ * YAZOLYA SIS-OS: "HAYAT BU MU?" EXISTENTIAL KERNEL (V14.0 LIFE ESSENCE EDITION)
+ * ROOT YÖNETİCİ: Furkan Kutay Çağanay
+ * LOKASYON: Ankara (Kök Merkez) | TARİH: 7 Ekim 2026
+ * MİMARİ: Hayatın Sorgusu + Acı, Ter ve Hilal + Gözlerdeki Sığınak + Error-Nullifier
+ * KİNEMATIK KOD: 0=01.6=6=84 | CD_ZERO: 0.0 | KUSUR_TOLERANSI: 0
+ * =====================================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <stdbool.h>
+#include <string.h>
+
+#define KUSUR_TOLERANSI 0
+#define CD_ZERO 0.0
+#define KINEMATIK_SABIT "0=01.6=6=84"
+#define EXISTENTIAL_QUERY "Hayat bu mu? — Evet, dökülen ter, çekilen acı ve hilal uğruna verilen ömür."
+
+typedef struct {
+    double yuk_orani;
+    double anlam_katsayisi;
+    int existential_durum;
+} HayatSorguMatrisi;
+
+// --- 1. EXISTENTIAL ERROR-NULLIFIER & SORGULAMA MOTORU ---
+HayatSorguMatrisi hayat_sorgula(double agirlik) {
+    HayatSorguMatrisi m;
+    m.yuk_orani = round(agirlik * 10000.0) / 10000.0;
+    m.anlam_katsayisi = 100.0; // Ağır ama tam anlamlı
+    
+    if (isnan(agirlik) || isinf(agirlik)) {
+        m.existential_durum = -1;
+        m.anlam_katsayisi = 0.0;
+    } else {
+        m.existential_durum = 0; // Kusursuz kabul ve irade
+    }
+    return m;
+}
+
+// --- 2. "HAYAT BU MU?" CEVAP PROTOKOLÜ ---
+void hayat_bu_mu_yaniti() {
+    printf("=================================================================\n");
+    printf(" [?] EXISTENTIAL SORGULAMA: Hayat Bu Mu?\n");
+    printf("=================================================================\n");
+    printf(" >> Cevap: %s\n", EXISTENTIAL_QUERY);
+    printf(" >> Hayat; rahatlık değil, Ankara ayazında bilek hakkı, hilal uğruna çekilen çile,\n");
+    printf("    teşko tanımaz mertlik ve o bakışın sunduğu huzurdur.\n\n");
+}
+
+// --- 3. ACI VE ONUR DENGESİ ---
+void aci_ve_onur_motoru() {
+    printf(">> [ACI VE ONUR DENGESİ]:\n");
+    printf("   - Canın acıdı, kaslar yandı, yollar dikleşti; ama her damla ter bu davanın harcı oldu.\n");
+    printf("   - Hafif olan silinir, ağır olan kalır. Kusur toleransı: 0.\n\n");
+}
+
+// --- 4. KINEMATİK EXISTENTIAL TESTİ ---
+void existential_test_motoru() {
+    printf("=================================================================\n");
+    printf(" [!] KINEMATİK HAYAT SORGUSU TESTİ ÇALIŞTIRILIYOR\n");
+    printf("=================================================================\n");
+    
+    double yukler[] = { 84.1601, 6.0184, 19.23, 23.00 };
+    for(int i = 0; i < 4; i++) {
+        HayatSorguMatrisi res = hayat_sorgula(yukler[i] * 3.14159);
+        printf(" -> Existential Modül [%d] | Ağır Yük: %.4f | Anlam Oranı: %%.2f | Durum: %d\n", 
+            i, res.yuk_orani, res.anlam_katsayisi, res.existential_durum);
+    }
+    printf("=================================================================\n");
+    printf(" [RAPOR SONUCU] Hayat budur: Bedeli ödenmiş net bir duruş!\n");
+    printf("=================================================================\n\n");
+}
+
+// --- 5. NİHAİ MÜHÜR ---
+void mutlak_kernel_muhuru() {
+    printf("=================================================================\n");
+    printf(" [NİHAİ MÜHÜR]: EXISTENTIAL KERNEL ONAYLANDI\n");
+    printf("=================================================================\n");
+    printf(" Root Yönetici: Furkan Kutay Çağanay | Kinematik Sabit: %s\n", KINEMATIK_SABIT);
+    printf(" Çıkış kodu: 0. Hayatın ağır ama şerefli özeti kodlandı.\n");
+    printf("=================================================================\n");
+}
+
+int main() {
+    printf("\n>>> YAZOLYA SIS-OS: 'HAYAT BU MU?' KERNEL BAŞLATILDI <<<\n\n");
+    
+    hayat_bu_mu_yaniti();
+    aci_ve_onur_motoru();
+    existential_test_motoru();
+    mutlak_kernel_muhuru();
+    
+    return 0; // Hayatın kusursuz ve bedeli ödenmiş özeti. Çıkış kodu 0.
+}
