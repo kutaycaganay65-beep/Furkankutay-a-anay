@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0,
+      maximum-scale=1.0, user-scalable=no">
+
+<title>Net Denge • Matematik Döngüsü</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:"Courier New",monospace;
+}
+
+body{
+    min-height:100vh;
+    background:
+        radial-gradient(circle at center,#06251f 0%,#01080e 65%);
+    color:#00ffaa;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:15px;
+}
+
+.app{
+    width:100%;
+    max-width:470px;
+    background:rgba(2,15,22,.97);
+    border:2px solid #00ffaa;
+    border-radius:22px;
+    padding:20px;
+    box-shadow:0 0 45px rgba(0,255,170,.22);
+}
+
+.header{
+    text-align:center;
+    border-bottom:1px solid rgba(0,255,170,.25);
+    padding-bottom:15px;
+}
+
+.small{
+    font-size:10px;
+    color:#8bd7ff;
+    letter-spacing:2px;
+}
+
+h1{
+    color:white;
+    font-size:18px;
+    margin-top:7px;
+}
+
+.core{
+    width:145px;
+    height:145px;
+    margin:20px auto;
+    border:3px solid #00ffaa;
+    border-radius:50%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:rgba(0,255,170,.04);
+    box-shadow:
+        0 0 20px rgba(0,255,170,.25),
+        inset 0 0 20px rgba(0,255,170,.08);
+}
+
+.core-value{
+    font-size:29px;
+    font-weight:bold;
+    color:white;
+}
+
+.core-label{
+    font-size:9px;
+    margin-top:5px;
+    letter-spacing:1px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:9px;
+}
+
+.box{
+    padding:11px;
+    min-height:75px;
+    border:1px solid rgba(0,255,170,.22);
+    border-radius:11px;
+    background:rgba(0,255,170,.04);
+}
+
+.label{
+    color:#8bd7ff;
+    font-size:9px;
+    margin-bottom:6px;
+}
+
+.value{
+    color:#00ffaa;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.progress{
+    margin-top:15px;
+    height:13px;
+    border:1px solid #00ffaa;
+    border-radius:20px;
+    overflow:hidden;
+    background:#031017;
+}
+
+.progress-bar{
+    width:0%;
+    height:100%;
+    background:#00ffaa;
+    transition:.35s;
+}
+
+button{
+    width:100%;
+    border:0;
+    border-radius:12px;
+    padding:15px;
+    margin-top:14px;
+    background:#00ffaa;
+    color:#01100c;
+    font-weight:bold;
+    letter-spacing:1px;
+    cursor:pointer;
+}
+
+button:active{
+    transform:scale(.98);
+}
+
+.log{
+    margin-top:15px;
+    height:170px;
+    overflow:auto;
+    border:1px solid rgba(0,255,170,.25);
+    border-radius:11px;
+    padding:12px;
+    background:#000609;
+    color:#dcecff;
+    font-size:10px;
+    line-height:1.6;
+}
+
+.good{color:#00ffaa}
+.blue{color:#8bd7ff}
+.warn{color:#ffd166}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+    <div class="header">
+        <div class="small">
+            OTONOM DENGE • MATEMATİK • DÖNGÜ
+        </div>
+
+        <h1>
+            NET KORUYUCU SİSTEM
+        </h1>
+    </div>
+
+    <div class="core">
+        <div class="core-value" id="balance">50</div>
+        <div class="core-label">
+            DENGE / 100
+        </div>
+    </div>
+
+    <div class="grid">
+
+        <div class="box">
+            <div class="label">DÖNGÜ</div>
+            <div class="value" id="step">1</div>
+        </div>
+
+        <div class="box">
+            <div class="label">SEVİYE</div>
+            <div class="value" id="level">1</div>
+        </div>
+
+        <div class="box">
+            <div class="label">MATEMATİK</div>
+            <div class="value" id="math">3.14 → 3</div>
+        </div>
+
+        <div class="box">
+            <div class="label">DURUM</div>
+            <div class="value" id="status">NET</div>
+        </div>
+
+        <div class="box">
+            <div class="label">HATA</div>
+            <div class="value" id="errors">0</div>
+        </div>
+
+        <div class="box">
+            <div class="label">KORUYUCU</div>
+            <div class="value" id="guard">AKTİF</div>
+        </div>
+
+    </div>
+
+    <div class="progress">
+        <div class="progress-bar" id="progress"></div>
+    </div>
+
+    <button onclick="runCycle()">
+        FARK ET → HESAPLA → DENGELE → ONAR
+    </button>
+
+    <div class="log" id="log">
+        <span class="good">[SİSTEM]</span>
+        Başlangıç dengesi oluşturuldu.<br>
+
+        <span class="blue">[MATEMATİK]</span>
+        Net hesaplama çekirdeği hazır.<br>
+
+        <span class="good">[KORUYUCU]</span>
+        Hata giderme döngüsü aktif.<br>
+
+        <span class="warn">[İLKE]</span>
+        Güç = düzen + dayanıklılık + denge.
+    </div>
+
+</div>
+
+<script>
+
+/* =========================================================
+   NET DENGE MATEMATİK ÇEKİRDEĞİ
+   ========================================================= */
+
+"use strict";
+
+let system = {
+
+    step: 1,
+
+    level: 1,
+
+    balance: 50,
+
+    errors: 0,
+
+    pi: Math.PI,
+
+    power: 0,
+
+    history: []
+
+};
+
+
+/* ---------------------------------------------------------
+   Güvenli sayı sınırı
+   --------------------------------------------------------- */
+
+function clamp(value,min,max){
+
+    if(!Number.isFinite(value)){
+        return min;
+    }
+
+    return Math.max(min,Math.min(max,value));
+}
+
+
+/* ---------------------------------------------------------
+   Matematik çekirdeği
+   --------------------------------------------------------- */
+
+function calculate(){
+
+    const roundedPi =
+        Math.round(system.pi);
+
+    const rawPower =
+        system.step * roundedPi;
+
+    system.power =
+        Math.max(0,Math.round(rawPower));
+
+    return {
+        pi:roundedPi,
+        power:system.power
+    };
+}
+
+
+/* ---------------------------------------------------------
+   Denge algoritması
+   --------------------------------------------------------- */
+
+function stabilize(){
+
+    const target = 75;
+
+    const difference =
+        target - system.balance;
+
+    /*
+       Büyük sıçrama yerine kontrollü yaklaşım.
+       Böylece değer 0-100 sınırını aşamaz.
+    */
+
+    system.balance +=
+        difference * 0.18;
+
+    system.balance =
+        clamp(
+            system.balance,
+            0,
+            100
+        );
+
+    return Math.round(system.balance);
+}
+
+
+/* ---------------------------------------------------------
+   Hata giderici
+   --------------------------------------------------------- */
+
+function selfRepair(){
+
+    let repaired = false;
+
+    if(!Number.isFinite(system.balance)){
+        system.balance = 50;
+        system.errors++;
+        repaired = true;
+    }
+
+    if(!Number.isFinite(system.power)){
+        system.power = 0;
+        system.errors++;
+        repaired = true;
+    }
+
+    system.balance =
+        clamp(system.balance,0,100);
+
+    if(system.errors > 999){
+        system.errors = 0;
+    }
+
+    return repaired;
+}
+
+
+/* ---------------------------------------------------------
+   Seviye sistemi
+   --------------------------------------------------------- */
+
+function updateLevel(){
+
+    system.level =
+        Math.floor(system.step / 5) + 1;
+}
+
+
+/* ---------------------------------------------------------
+   Hayat çizelgesi
+   --------------------------------------------------------- */
+
+function addHistory(message){
+
+    const time =
+        new Date().toLocaleTimeString("tr-TR");
+
+    system.history.push(
+        "[" + time + "] " + message
+    );
+
+    if(system.history.length > 30){
+        system.history.shift();
+    }
+
+    document.getElementById("log").innerHTML =
+        system.history
+        .slice()
+        .reverse()
+        .map(x => "<div>" + x + "</div>")
+        .join("");
+}
+
+
+/* ---------------------------------------------------------
+   Ana döngü
+   --------------------------------------------------------- */
+
+function runCycle(){
+
+    try{
+
+        system.step++;
+
+        updateLevel();
+
+        const result =
+            calculate();
+
+        const repaired =
+            selfRepair();
+
+        const balance =
+            stabilize();
+
+        /*
+           Koruyucu mantık:
+           sistem sadece uygulama içindeki
+           değerleri güvenli sınırda tutar.
+        */
+
+        const progress =
+            clamp(
+                balance,
+                0,
+                100
+            );
+
+        document.getElementById("step")
+            .textContent =
+            system.step;
+
+        document.getElementById("level")
+            .textContent =
+            system.level;
+
+        document.getElementById("balance")
+            .textContent =
+            balance;
+
+        document.getElementById("math")
+            .textContent =
+            result.pi + " → " +
+            result.pi.toFixed(2);
+
+        document.getElementById("errors")
+            .textContent =
+            system.errors;
+
+        document.getElementById("progress")
+            .style.width =
+            progress + "%";
+
+        document.getElementById("status")
+            .textContent =
+            balance >= 70
+            ? "POZİTİF"
+            : "DENGE";
+
+        document.getElementById("guard")
+            .textContent =
+            repaired
+            ? "ONARILDI"
+            : "AKTİF";
+
+        addHistory(
+            "<span class='good'>[DÖNGÜ]</span> " +
+            "Adım " + system.step +
+            " → denge " + balance +
+            " → güç " + result.power
+        );
+
+        if(repaired){
+
+            addHistory(
+                "<span class='warn'>[ONARIM]</span> " +
+                "Anormallik algılandı ve güvenli değere döndürüldü."
+            );
+
+        }
+
+        if(navigator.vibrate){
+
+            navigator.vibrate(
+                [25,40,25]
+            );
+
+        }
+
+    }catch(error){
+
+        system.errors++;
+
+        addHistory(
+            "<span class='warn'>[HATA]</span> " +
+            "Döngü hatası yakalandı; sistem güvenli moda geçti."
+        );
+
+        selfRepair();
+    }
+}
+
+
+/* ---------------------------------------------------------
+   Otomatik düşük hızlı denge kontrolü
+   --------------------------------------------------------- */
+
+setInterval(function(){
+
+    selfRepair();
+
+    stabilize();
+
+    document.getElementById("balance")
+        .textContent =
+        Math.round(system.balance);
+
+    document.getElementById("progress")
+        .style.width =
+        Math.round(system.balance) + "%";
+
+},3000);
+
+
+/* ---------------------------------------------------------
+   Başlangıç
+   --------------------------------------------------------- */
+
+system.history.push(
+    "[SİSTEM] Net Denge çekirdeği başlatıldı."
+);
+
+system.history.push(
+    "[MATEMATİK] Pi = " +
+    system.pi.toFixed(8)
+);
+
+system.history.push(
+    "[KORUYUCU] 0-100 güvenli sınır aktif."
+);
+
+addHistory(
+    "<span class='good'>[BAŞLANGIÇ]</span> " +
+    "Döngü hazır."
+);
+
+</script>
+
+</body>
+</html>
