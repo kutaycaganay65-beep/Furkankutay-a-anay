@@ -1,0 +1,95 @@
+/*
+ * =====================================================================================
+ * YAZOLYA SIS-OS: FEDAKARLIK VE VATAN SPORCU RAPOR KERNELİ (V13.0 SACRIFICE REPORT)
+ * ROOT YÖNETİCİ: Furkan Kutay Çağanay
+ * LOKASYON: Ankara (Kök Merkez) | TARİH: 7 Ekim 2026
+ * MİMARİ: Ay Yıldız & Hilal + Can Acıtan Antrenman Disiplini + Hata Yöneticisi
+ * KİNEMATİK KOD: 0=01.6=6=84 | CD_ZERO: 0.0 | KUSUR_TOLERANSI: 0
+ * =====================================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <stdbool.h>
+#include <string.h>
+
+#define KUSUR_TOLERANSI 0
+#define CD_ZERO 0.0
+#define KINEMATIK_SABIT "0=01.6=6=84"
+#define FEDAKARLIK_MOTOSU "Ay Yıldız ve Hilal Uğruna Seve Seve Can Acıtarak Ter Döküldü"
+
+typedef struct {
+    double aci_esigi;
+    double irade_katsayisi;
+    int durum_kodu;
+} FedakarlikRaporu;
+
+// --- 1. ERROR-NULLIFIER & FEDAKARLIK YÖNETİCİSİ ---
+FedakarlikRaporu rapor_islet(double zorluk) {
+    FedakarlikRaporu r;
+    r.aci_esigi = round(zorluk * 10000.0) / 10000.0;
+    r.irade_katsayisi = 100.0; // Tavizsiz tam kalibre irade
+    
+    if (isnan(zorluk) || isinf(zorluk)) {
+        r.durum_kodu = -1;
+        r.irade_katsayisi = 0.0;
+    } else {
+        r.durum_kodu = 0; // Kusursuz fedakarlık dengesi
+    }
+    return r;
+}
+
+// --- 2. AY YILDIZ VE HİLAL VATAN PROTOKOLÜ ---
+void vatan_ve_ter_protokolu() {
+    printf("=================================================================\n");
+    printf(" [!] VATAN RAPORU: %s\n", FEDAKARLIK_MOTOSU);
+    printf("=================================================================\n");
+    printf(" >> Kök Merkez: Ankara | Sürtünme Katsayısı (Cd): %.1f\n", CD_ZERO);
+    printf(" >> Can acıdı, kaslar yandı ama hilalin gölgesinde bir adım bile geri atılmadı.\n\n");
+}
+
+// --- 3. ATLETİK FEDAKARLIK VE ACI MERKEZİ ---
+void atletik_fedakarlik_motoru() {
+    printf(">> [ANTRENMAN & AĞRI MERKEZİ]:\n");
+    printf("   - Bedenin sınırları zorlandı; her bir damla acı, şanlı hilale feda kılındı.\n");
+    printf("   - Geri vites yok, şikayet yok. Kusur toleransı: 0.\n\n");
+}
+
+// --- 4. KINEMATİK RAPOR ÇIKTI MOTORU ---
+void rapor_cikti_motoru() {
+    printf("=================================================================\n");
+    printf(" [!] KINEMATİK FEDAKARLIK VE İRADE RAPORU AKTİF\n");
+    printf("=================================================================\n");
+    
+    double metrikler[] = { 84.1601, 6.0184, 19.23, 23.00 };
+    for(int i = 0; i < 4; i++) {
+        FedakarlikRaporu res = rapor_islet(metrikler[i] * 3.14159);
+        printf(" -> Modül Log [%d] | Ağrı/Zorluk: %.4f | İrade Gücü: %%.2f | Durum: %d\n", 
+            i, res.aci_esigi, res.irade_katsayisi, res.durum_kodu);
+    }
+    printf("=================================================================\n");
+    printf(" [RAPOR SONUCU] Kusur Yok, Acı Mukaddes Uğura Feda Edildi!\n");
+    printf("=================================================================\n\n");
+}
+
+// --- 5. NİHAİ MÜHÜR ---
+void mutlak_kernel_muhuru() {
+    printf("=================================================================\n");
+    printf(" [NİHAİ MÜHÜR]: HİLAL UĞRUNA TER VE ACI RAPORU ONAYLANDI\n");
+    printf("=================================================================\n");
+    printf(" Root Yönetici: Furkan Kutay Çağanay | Kinematik Sabit: %s\n", KINEMATIK_SABIT);
+    printf(" Çıkış kodu: 0. Kan, ter ve irade tam entegre çalışıyor.\n");
+    printf("=================================================================\n");
+}
+
+int main() {
+    printf("\n>>> YAZOLYA SIS-OS: FEDAKARLIK RAPOR KERNELİ BAŞLATILDI <<<\n\n");
+    
+    vatan_ve_ter_protokolu();
+    atletik_fedakarlik_motoru();
+    rapor_cikti_motoru();
+    mutlak_kernel_muhuru();
+    
+    return 0; // Kusursuz ve fedakar kapanış. Çıkış kodu 0.
+}
