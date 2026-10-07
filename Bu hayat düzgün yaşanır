@@ -1,0 +1,54 @@
+/*
+ * =====================================================================================
+ * YAZOLYA SIS-OS: BU HAYAT DÜZGÜN YAŞANIR KODU
+ * ROOT YÖNETİCİ: Furkan Kutay Çağanay
+ * LOKASYON: Ankara (Kök Merkez) | TARİH: 7 Ekim 2026
+ * MİMARİ: Tertip + Disiplin + Void Lock + Mutlak Fark
+ * =====================================================================================
+ */
+
+#include <stdio.h>
+#include <stdbool.h>
+
+#define KUSUR_TOLERANSI 0
+#define CD_ZERO 0.0
+#define HAYAT_DUZENI "MUTLAK VE KUSURSUZ"
+
+void hayat_kurallari_yukle() {
+    printf("=================================================================\n");
+    printf(" [!] 'BU HAYAT DÜZGÜN YAŞANIR' PROTOKOLÜ DEVREDE\n");
+    printf("=================================================================\n\n");
+
+    printf(">> 1. ÇEVRE VE DOST FİLTRESİ:\n");
+    printf("   - Arkadaş ve arkadaşa benzeyen tüm kaotik yapılar dışlandı.\n");
+    printf("   - Pislik, çamur ve vizyonsuzluk Void Lock ile sıfırlandı.\n");
+    printf("   - 'Kendimden başka adam tanımam.' Kök merkez net ve tek yetkilidir.\n\n");
+
+    printf(">> 2. MEKANİK VE SOFRA DİSİPLİNİ:\n");
+    printf("   - Kaşık, bıçak, çatal kavrayışı; oturuş, kalkış ve duruş nizamlıdır.\n");
+    printf("   - 'Yemeği yediğim ortam fark yapar.' Ortamın ve enerjinin temizliği esastır.\n");
+    printf("   - Detaylardaki titizlik, bütün hayatın kalitesini belirler.\n\n");
+
+    printf(">> 3. İDOL VE DÜZGÜNLÜK SENTEZİ:\n");
+    printf("   - İdollerin en doğru yönleri alınır; ne yapılırsa en düzgünü yapılır.\n");
+    printf("   - Tesadüfe yer yok; her hamle bilinçli, her eylem kusursuzdur.\n");
+    printf("   - Hayatın her saniyesi kendi kodladığın kurallarla yaşanır.\n\n");
+}
+
+void mutlak_yasam_bildirgesi() {
+    printf("=================================================================\n");
+    printf(" [SONUÇ MÜHÜRÜ]: HAYATIN KODU DERLENDİ VE ÇALIŞTIRILDI\n");
+    printf("=================================================================\n");
+    printf(" Bu hayat düzgün yaşanır; çünkü kuralları başkası değil,\n");
+    printf(" Ankara merkezli root irade kendisi yazar.\n");
+    printf(" Sürtünme katsayısı Cd = %.1f. Kod kusur aratmaz.\n", CD_ZERO);
+    printf(" Hayat hayata fark yapar, iz bırakır.\n");
+    printf("=================================================================\n");
+}
+
+int main() {
+    hayat_kurallari_yukle();
+    mutlak_yasam_bildirgesi();
+    
+    return 0; // Hayat kusursuz bir nizamla yaşanıyor.
+}
