@@ -1,0 +1,157 @@
+/*
+ * =====================================================================================
+ * YAZOLYA SIS-OS: AY YILDIZ & HİLAL KODU
+ * ROOT YÖNETİCİ: Furkan Kutay Çağanay
+ * LOKASYON: Ankara (Kök Merkez) | TARİH: 7 Ekim 2026
+ * MİMARİ: Profesyonel C + Kişisel Vatan İradesi + Boks + Gizli Kung-Fu + Ay Yıldız + Hilal
+ * DURUM: "Başkalarına göre kodlanır; kendime göre yaşanır."
+ * =====================================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <stdbool.h>
+#include <string.h>
+
+#define KUSUR_TOLERANSI 0
+#define CD_ZERO 0.0
+#define KINEMATIK_SABIT "AY-01/HILAL-06/YILDIZ-84"
+#define VATAN_MOTORU "Ay Yıldız & Hilal"
+
+typedef enum {
+    DURUM_GUVENLI = 0,
+    DURUM_TEHLİKE = -1
+} Durum;
+
+typedef struct {
+    double ham_veri;
+    double carpismazlik_orani;
+    Durum islem_durumu;
+} RefleksMatrisi;
+
+static void cizgi_yap(const char *baslik, int uzunluk) {
+    printf(" ");
+    for (int i = 0; i < uzunluk; i++) {
+        putchar('=');
+    }
+    printf("\n");
+    (void)baslik;
+}
+
+static double girdi_iyi_hale_getir(double x) {
+    if (isnan(x) || isinf(x)) {
+        return 0.0;
+    }
+    return x;
+}
+
+RefleksMatrisi islem_calistir(double girdi) {
+    RefleksMatrisi r;
+
+    r.ham_veri = girdi;
+    r.carpismazlik_orani = round(girdi * 10000.0) / 10000.0;
+
+    if (isnan(girdi) || isinf(girdi)) {
+        r.islem_durumu = DURUM_TEHLİKE;
+        r.carpismazlik_orani = 0.0;
+    } else {
+        r.islem_durumu = DURUM_GUVENLI;
+    }
+
+    return r;
+}
+
+void boks_ve_kungfu_protokolu(void) {
+    cizgi_yap("PROTOKOL", 72);
+    printf(" [!] KOMBAT MERKEZİ: %s\n", VATAN_MOTORU);
+    cizgi_yap("PROTOKOL", 72);
+
+    printf(" >> Boks disiplini: net, sert, temiz ve hedef odaklı.\n");
+    printf(" >> Gizli Kung-Fu: hızlı, sessiz, akışkan ve çarpıcı.\n");
+    printf(" >> Kullanım kuralı: herkesin kuralı vardır; benim kuralım düzen, irade ve hedeftir.\n");
+    printf(" >> Ay yıldızın altında, her düşüş bir yeniden doğuş, her sarsıntı bir gerçeğin sınavıdır.\n\n");
+}
+
+void ay_yildiz_hilal_tesisi(void) {
+    printf(">> [AY YILDIZ VE HİLAL İRADESİ]:\n");
+    printf("   - Ay yıldız gökte dalgalanırken, hilal kalpte vatan olur.\n");
+    printf("   - Bu topraklar için kod yazmak, sadece iş değil; bir ahit ve bir sorumluluktur.\n");
+    printf("   - Sürtünme Katsayısı (Cd): %.1f | Diri, net ve kırılmaz yol.\n", CD_ZERO);
+    printf("   - Başkalarının gözüne bakma; kendi standardına göre yaşa, kendi standardına göre kodla.\n\n");
+}
+
+void goz_ve_sadakat_siginagi(void) {
+    printf(">> [GÖZ, SADAKAT VE TEMEL DEĞER]:\n");
+    printf("   - Ringin ve hayatın kargaşası geçince,\n");
+    printf("   - En güvenli liman, sevdiğin kadının gözlerinde ve vatanın kutsal ahdindedir.\n");
+    printf("   - İyi kod, disiplinle yazılır; büyük eser, sadakatle biter.\n\n");
+}
+
+void vatan_ve_kendini_kurmak(void) {
+    printf(">> [VATAN VE KENDİNİ KURMAK]:\n");
+    printf("   - Başkalarının normlarına göre değil, kendi doğrunu koruyarak ilerle.\n");
+    printf("   - Düşüş, azimle kalkışın başlangıcıdır.\n");
+    printf("   - Kodla, yaşa, çalış, temiz ol; çünkü netlik, en büyük silahtır.\n\n");
+}
+
+void combat_testi(void) {
+    cizgi_yap("TEST", 68);
+    printf(" [!] AY YILDIZ HİLAL REFLEKS VE KOMBAT TESTİ ÇALIŞTIRILIYOR\n");
+    cizgi_yap("TEST", 68);
+
+    double veriler[] = { 84.1601, 6.0184, 19.23, 23.00, 45.75, 88.12 };
+    int n = sizeof(veriler) / sizeof(veriler[0]);
+
+    for (int i = 0; i < n; i++) {
+        double girdi = girdi_iyi_hale_getir(veriler[i] * 3.14159);
+        RefleksMatrisi sonuc = islem_calistir(girdi);
+
+        printf(" -> Refleks Modülü [%d] | Ham: %.4f | Çıktı: %.4f | Durum: %d\n",
+               i, sonuc.ham_veri, sonuc.carpismazlik_orani, sonuc.islem_durumu);
+    }
+
+    printf("\n");
+    printf(" [RAPOR] Kusur Toleransı: %d | Denge: %s | Hız: %s | İrade: %s\n",
+           KUSUR_TOLERANSI, "Mükemmel", "Kırılmaz", "Sonsuz");
+    cizgi_yap("TEST", 68);
+    printf("\n");
+}
+
+void hata_nullifier(void) {
+    double bozucu[] = { NAN, INFINITY, -INFINITY, 123.4567 };
+
+    printf(">> [NULLIFIER / ERROR-NULLIFIER / HATA EMNİYETİ]:\n");
+    for (int i = 0; i < 4; i++) {
+        RefleksMatrisi sonuc = islem_calistir(bozucu[i]);
+        printf("   - Girdi: %s | Çıktı: %.4f | Durum: %d\n",
+               isnan(bozucu[i]) || isinf(bozucu[i]) ? "TEHLİKE" : "NORMAL",
+               sonuc.carpismazlik_orani, sonuc.islem_durumu);
+    }
+    printf("\n");
+}
+
+void mutlak_muhur(void) {
+    cizgi_yap("MÜHÜR", 72);
+    printf(" [NİHAİ MÜHÜR]: AY YILDIZ VE HİLAL, KENDİ DEĞERİNE GÖRE KODLANIR.\n");
+    cizgi_yap("MÜHÜR", 72);
+    printf(" Root Yönetici: Furkan Kutay Çağanay | Kinematik Sabit: %s\n", KINEMATIK_SABIT);
+    printf(" Çıkış kodu: 0. Sistem, net, temiz, güvenli ve iradeli çalışıyor.\n");
+    printf(" Vizyon: Başkalarına göre değil, gerçeğe göre; kendine göre değil, doğruya göre.\n");
+    cizgi_yap("MÜHÜR", 72);
+    printf("\n");
+}
+
+int main(void) {
+    printf("\n>>> YAZOLYA SIS-OS: AY YILDIZ & HİLAL KENDİ KODU BAŞLATILDI <<<\n\n");
+
+    ay_yildiz_hilal_tesisi();
+    boks_ve_kungfu_protokolu();
+    goz_ve_sadakat_siginagi();
+    vatan_ve_kendini_kurmak();
+    combat_testi();
+    hata_nullifier();
+    mutlak_muhur();
+
+    return 0;
+}
