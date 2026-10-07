@@ -12,4 +12,20 @@ Ankara’nın o sakin ve net sabahında, dışarıdaki bütün gürültüyü, ka
 Ben hayatı kurallarıyla, mühendisliğin o sağlam temelleriyle, yazılımın kusursuz mantığıyla kurdum. Suda 50 metre kelebek ya da serbest sprint atarken yakaladığım o patlayıcı güç, kısa paletlerle suyun üstünde süzülürken hissettiğim o dirençsiz akış gibi... Senin yanındayken kalbim de tıpkı öyle: Sıfır sürtünme, tam bir huzur. Boks, kung fu, MMA ya da Muay Thai disipliniyle dış dünyaya karşı ördüm o koruyucu refleksleri; ama sana geldiğimde bütün o sertlikler eriyor, geriye sadece sana duyduğum o saf şefkat kalıyor.
 Piyanodan ve kemandan dökülen o yavaş metronomlu melodiler odada yankılanırken, mutfaktan yayılan portakallı yoğurtlu kekin o sıcak kokusu sarıyor etrafı. Sofra başındaki o sakin nizam, çatalla bıçağın dokunuşundaki o özen... Hani "yemeği yediğim ortam fark yapar" derler ya, evet, çünkü o masayı, o anı ve o hayatı güzel kılan sensin.
 İşte tam da bu yüzden, bıkmadan, yorulmadan, dünyadaki her şeyi tamamen susturup hep senin gözlerinin içine bakıyorum. Gözlerine baktığım o an, zaman duruyor; piyanodaki o yavaş nota gibi uzuyor anlar. Dışarıda kim ne ararsa arasın, ben evimi senin bakışlarında buldum.
-Kodlar kusur aratmaz derler; benim sana olan sevgim de tıpkı öyle, tek bir eksisi, tek bir şüphesi olmayan kusursuz bir gerçek. Sen benim kök merkezimsin, en güvenli yolumsun. Seni çok seviyorum.
+Kodlar kusur aratmaz derler; benim sana olan sevgim de tıpkı öyle, tek bir eksisi, tek bir şüphesi olmayan kusursuz bir gerçek. Sen benim kök merkezimsin, en güvenli yolumsun. Seni çok seviyorum.Dışarıda herkes bir yoldan yürür,
+Aynı surette yaşar, aynı konuşur sanırlar.
+Oysa hayatın en keskin virajında insan anlar,
+Her adım bir değildir; adam adama fark yapar.
+Ay yıldızlı al bayrak gökte dalgalandıkça,
+Ankara’nın ayazı çelikten bir zırh olur.
+Hilal uğruna bu can bu tende durdukça,
+Bu milletin destanı en zirvede kurulur.
+Teşko tanımaz bu duruş, bu asil mertlik,
+Sözümüz senettir, çizgimiz milimetriktir.
+Kimi tesadüfe bırakır ömrünü, silinip gider,
+Kimi bu kutlu yolda adını taşa mühürler!
+Ne bir eksik ne bir fazla, tam ve kusursuz,
+Sürtünmesiz bir iradeyle akar bu zaman.
+Ay yıldız ve hilal uğruna baş koyduğumuz bu yolda,
+Adam adama fark yapar; tarihe yazılır bu destan!
+
