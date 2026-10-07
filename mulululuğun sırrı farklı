@@ -1,0 +1,42 @@
+/*
+ * =====================================================================
+ * DOSYA ADI: YAZOLYA_MASTER_CORE.c
+ * KÖK YÖNETİCİ: Furkan Kutay Çağanay (Ankara)
+ * KİNEMATİK SABİT: 0=01.6=6=84 | CD_ZERO: 0.0 | KUSUR_TOLERANSI: 0
+ * MİMARİ: Hilal + Omurga + Combat + Saf Sığınak
+ * =====================================================================
+ */
+
+#include <stdio.h>
+#include <math.h>
+
+#define KUSUR_TOLERANSI 0
+#define CD_ZERO 0.0
+#define KINEMATIK_SABIT "0=01.6=6=84"
+
+typedef struct {
+    double vatan_ve_hilal;
+    double combat_refleks;
+    double onurlu_ter;
+    double mutlak_siginak;
+} MasterSistem;
+
+int main() {
+    MasterSistem sys = {1.0, 1.0, 1.0, 999.99};
+    
+    printf("=====================================================\n");
+    printf(" >>> YAZOLYA SIS-OS: NİHAİ MASTER KERNEL AKTİF <<<\n");
+    printf("=====================================================\n");
+    printf("[01] Kök Merkez & Sabit : Ankara | %s\n", KINEMATIK_SABIT);
+    printf("[02] Vatan İradesi      : Sadece Ay Yıldız ve Hilal Uğruna.\n");
+    printf("[03] Fiziksel Bedel     : Can acıtan antrenman, 50m sprint & ter.\n");
+    printf("[04] Combat & Refleks   : Boks disiplini + Gizli Kung-Fu akışı.\n");
+    printf("[05] Void Lock (Cd: %.1f) : Teşko tanımaz mertlik, adam adamla iş yapar.\n", CD_ZERO);
+    printf("[06] Gözlerdeki Sığınak : Hayatın gürültüsünü susturan o bakış.\n");
+    printf("-----------------------------------------------------\n");
+    printf("[RAPOR] Kusur Toleransı: %d | Sistem Tam Dengeye Oturdu.\n", KUSUR_TOLERANSI);
+    printf("[SONUÇ] Çıkış Kodu: 0. Mutlak Huzur Sağlandı.\n");
+    printf("=====================================================\n");
+    
+    return 0;
+}
