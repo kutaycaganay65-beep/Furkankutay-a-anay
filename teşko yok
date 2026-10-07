@@ -1,0 +1,21 @@
+/*
+ * =====================================================================
+ * DOSYA ADI: YAZOLYA_AXIS.c
+ * KÖK YÖNETİCİ: Furkan Kutay Çağanay (Ankara)
+ * KİNEMATİK SABİT: 0=01.6=6=84 | CD_ZERO: 0.0 | KUSUR_TOLERANSI: 0
+ * =====================================================================
+ */
+
+#include <stdio.h>
+
+int main() {
+    printf(">>> YAZOLYA_AXIS: NİHAİ KÖK ÇEKİRDEK AKTİF <<<\n");
+    printf("[1] Vatan İradesi  : Sadece Ay Yıldız ve Hilal Uğruna.\n");
+    printf("[2] Fiziksel Bedel : Can acıtarak, tavizsiz ve kusursuz ter.\n");
+    printf("[3] Combat / Duruş : Boks disiplini, gizli kung-fu, teşko yok.\n");
+    printf("[4] Sistem Durumu  : Kusur Toleransı = 0.\n");
+    printf("-----------------------------------------------------\n");
+    printf("[SONUÇ] Adam adamla iş yapar. Çıkış Kodu: 0 (Tam Denge).\n");
+    
+    return 0;
+}
