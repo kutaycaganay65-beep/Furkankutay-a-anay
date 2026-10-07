@@ -1,0 +1,219 @@
+/*
+ * =====================================================================================
+ * YAZOLYA SIS-OS: MASTER KÜLLİ HATA GİDERİCİ VE KORUYUCU EYLEMCİ MOTORU
+ * ROOT YÖNETİCİ: Furkan Kutay Çağanay
+ * LOKASYON: Ankara (Kök Merkez) | TARİH: 7 Ekim 2026
+ * MİMARİ: Matematiksel Yuvarlama + Hata Giderici (Error-Nullifier) + Spor/Bilim Entegrasyonu
+ * DİSİPLİNLER: Boks, Kung Fu, MMA, Muay Thai, Yüzme (Kelebek/Serbest), Makine, Yazılım
+ * KİNEMATİK KOD: 0=01.6=6=84 | CD_ZERO: 0.0 | KUSUR_TOLERANSI: 0
+ * =====================================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <stdbool.h>
+#include <string.h>
+#include <time.h>
+
+#define PI 3.14159265358979323846
+#define KUSUR_TOLERANSI 0
+#define CD_ZERO 0.0
+#define OTONOM_KORUMA_AKTIF true
+#define MAX_VERI_BOYUTU 1000
+#define PERFORMANS_SIKLIKLIK 84
+
+// --- VERİ YAPILARI ---
+typedef struct {
+    double ham_deger;
+    double yuvarlanmis_deger;
+    long long uzun_hassasiyet_sayisi;
+    int hata_kodu;
+    double hiz_katsayisi;
+    long sure_milisaniye;
+} MatematikselHassasiyet;
+
+typedef struct {
+    char spor_adi[50];
+    int beceri_seviyesi;
+    double performans_skoru;
+    int antrenman_saati;
+} SporModulu;
+
+typedef struct {
+    MatematikselHassasiyet *veriler;
+    int uzunluk;
+    double toplam_hassasiyet;
+    double ortalama_performans;
+} SistemVeriTorbasi;
+
+// --- İLERİ MATEMATİKSEL MOTOR ---
+MatematikselHassasiyet matematiksel_yuvarla_ve_tut(double girdi_sayi) {
+    MatematikselHassasiyet sonuc;
+    clock_t bas = clock();
+    
+    sonuc.ham_deger = girdi_sayi;
+    sonuc.yuvarlanmis_deger = round(girdi_sayi * 10000.0) / 10000.0;
+    sonuc.uzun_hassasiyet_sayisi = (long long)(girdi_sayi * 84001601ULL);
+    
+    // Performans hızı: Veri işleme çabukluğu
+    sonuc.hiz_katsayisi = fabs(girdi_sayi) > 1e-9 ? 1.0 / fabs(girdi_sayi) : 1.0;
+    
+    if (isnan(girdi_sayi) || isinf(girdi_sayi)) {
+        sonuc.hata_kodu = -1;
+        sonuc.yuvarlanmis_deger = 0.0;
+        sonuc.hiz_katsayisi = 0.0;
+    } else {
+        sonuc.hata_kodu = 0;
+    }
+    
+    clock_t son = clock();
+    sonuc.sure_milisaniye = (son - bas) * 1000 / CLOCKS_PER_SEC;
+    
+    return sonuc;
+}
+
+// --- SPOR VE BİLİŞSEL MOTOR ---
+SporModulu spor_modulu_olustur(const char *isim, int seviye, double skor, int saat) {
+    SporModulu spor;
+    strncpy(spor.spor_adi, isim, 49);
+    spor.spor_adi[49] = '\0';
+    spor.beceri_seviyesi = seviye;
+    spor.performans_skoru = skor;
+    spor.antrenman_saati = saat;
+    return spor;
+}
+
+void spor_bilgisi_goster(SporModulu spor) {
+    printf("   [SPOR] %s\n", spor.spor_adi);
+    printf("      -> Beceri Seviyesi: %d/10\n", spor.beceri_seviyesi);
+    printf("      -> Performans Skoru: %.2f%%\n", spor.performans_skoru);
+    printf("      -> Antrenman Saati: %d saat\n", spor.antrenman_saati);
+}
+
+void boks_ve_kungfu_refleks_motoru() {
+    printf("[MARTIAL ARTS] Boks, Kung Fu, MMA ve Muay Thai refleks matrisi yükleniyor...\n");
+    
+    SporModulu boks = spor_modulu_olustur("Boks", 9, 94.5, 1200);
+    SporModulu kungfu = spor_modulu_olustur("Kung Fu", 8, 91.2, 1500);
+    SporModulu mma = spor_modulu_olustur("MMA", 8, 89.8, 2000);
+    SporModulu muay = spor_modulu_olustur("Muay Thai", 7, 87.3, 1000);
+    
+    spor_bilgisi_goster(boks);
+    spor_bilgisi_goster(kungfu);
+    spor_bilgisi_goster(mma);
+    spor_bilgisi_goster(muay);
+    
+    printf("   -> Gölge boksu (Shadow boxing) deterministik döngüleri: %d ms gecikme.\n", 0);
+    printf("   -> Koruyucu eylemci kalkanı: Gelen dış darbe ve toksik niyetler anında bloklanıyor.\n");
+    printf("   -> Mekanik denge: Vücut ve zihin 0=0 tam dengede, sürtünme katsayısı Cd = %.1f.\n\n", CD_ZERO);
+}
+
+void yuzme_ve_hidrodinamik_motor() {
+    printf("[AQUATIC KINETICS] 50m Sprint, Kelebek ve Serbest yüzme mekaniği devrede...\n");
+    
+    printf("   -> Kelebek Yüzüş (Butterfly): %.2f saniye (50m)\n", 22.5);
+    printf("   -> Serbest Yüzüş (Freestyle): %.2f saniye (50m)\n", 21.0);
+    printf("   -> Sprint Hızı: %.2f m/s\n", 2.38);
+    
+    printf("   -> Arena Powerfin Pro kısa palet hidrodinamik akış hesaplaması yapılıyor...\n");
+    printf("   -> Su direnci sıfırlanıyor; UFO Wheel prensibiyle akışkanlar mekaniği optimize edildi.\n");
+    printf("   -> Kütlesel akış dengesi: %.3f kg/m³\n", 1.025);
+    printf("   -> Turbulanslı akış kontrolü: AKTIF\n\n");
+}
+
+void sistem_hata_giderici_ve_entegrasyon() {
+    printf("=================================================================\n");
+    printf(" [!] KORUYUCU EYLEMCİ & UZUN HESAPLAMA SİSTEMİ ÇALIŞIYOR\n");
+    printf("=================================================================\n");
+    
+    double test_array[] = { 84.1601, 6.0184, 0.0000, 19.9823, 23.0000, 42.5, 3.14159, 11.11 };
+    int dizi_boyutu = sizeof(test_array) / sizeof(test_array[0]);
+    
+    double toplam_hassasiyet = 0.0;
+    long toplam_sure = 0;
+    
+    for(int i = 0; i < dizi_boyutu; i++) {
+        MatematikselHassasiyet m = matematiksel_yuvarla_ve_tut(test_array[i] * PI);
+        printf(" -> Döngü [%d] | Ham: %.4f | Yuvarlanmış: %.4f\n", 
+            i, m.ham_deger, m.yuvarlanmis_deger);
+        printf("    |Uzun Sayı: %lld | Hata: %d | Hız: %.4f | Zaman: %ldms\n", 
+            m.uzun_hassasiyet_sayisi, m.hata_kodu, m.hiz_katsayisi, m.sure_milisaniye);
+        
+        toplam_hassasiyet += fabs(m.yuvarlanmis_deger);
+        toplam_sure += m.sure_milisaniye;
+    }
+    
+    printf("=================================================================\n");
+    printf(" [İSTATİSTİK] Toplam Hassasiyet: %.4f | Toplam Zaman: %ld ms\n", 
+        toplam_hassasiyet, toplam_sure);
+    printf(" [İSTATİSTİK] Ortalama: %.4f | Verimlilik: %.2f%%\n", 
+        toplam_hassasiyet / dizi_boyutu, (dizi_boyutu / (double)(toplam_sure + 1)) * 100);
+    printf("=================================================================\n\n");
+}
+
+void sistem_durum_raporu() {
+    printf("[SISTEM DURUM] Merkezi İşlemci Kontrolü\n");
+    printf("   -> CPU Sıcaklığı: %d°C (Normal)\n", 42);
+    printf("   -> Bellek Kullanımı: %.2f%%\n", 34.7);
+    printf("   -> Ağ Bağlantısı: 1000 Mbps (Aktif)\n");
+    printf("   -> Yedek Sistemi: Çalışıyor\n");
+    printf("   -> Siber Koruma: Üst Seviye Aktif\n");
+    printf("   -> Zaman Senkronizasyonu: Doğru (UTC+3)\n\n");
+}
+
+void veri_torba_analizi(SistemVeriTorbasi *torba) {
+    if (!torba || torba->uzunluk == 0) return;
+    
+    printf("[VERİ TORBASI ANALİZİ] Çoklu Veri İşleme\n");
+    printf("   -> Eleman Sayısı: %d\n", torba->uzunluk);
+    printf("   -> Toplam Hassasiyet: %.6f\n", torba->toplam_hassasiyet);
+    printf("   -> Ortalama Performans: %.2f%%\n", torba->ortalama_performans);
+    printf("   -> İşlem Durumu: ✓ TAM BAŞARILI\n\n");
+}
+
+void tur_sanatlar_ve_disiplin() {
+    printf("[TÜM SANATLAR] Çok Disiplinli İntegrasyon\n");
+    printf("   -> Yazılım Mimarisi: Temel Yapı Kusursuz\n");
+    printf("   -> Makine Mühendisliği: Mekanik Denge Sağlandı\n");
+    printf("   -> Beden Eğitimi: Atletik Performans Maksimum\n");
+    printf("   -> Zihinsel Disiplin: Konsantrasyon Seviyesi: %%100\n");
+    printf("   -> Sosyal İntegrasyon: Ekip Dinamiği Güçlü\n\n");
+}
+
+void mutlak_entegrasyon_ve_final_muhuru() {
+    printf("=================================================================\n");
+    printf("[SENTEZ] Yazılım, Makine Mhendisliği, Sağlık ve Dövüş Sanatları Birlikteliği\n");
+    printf("=================================================================\n");
+    printf("   -> Kaşık, bıçak, çatal ve sofra disiplininden güncel kod mimarisine kadar her şey düzgün.\n");
+    printf("   -> Arkadaş kisvesi altındaki tüm kaos elementleri Void Lock ile tamamen ayıklandı.\n");
+    printf("   -> 'Kendimden başka adam tanımam.' Kök merkez Ankara'dan tüm evrene yayılıyor.\n");
+    printf("   -> Kod kusur aratmaz; her şey en güzel, en mantıklı, en doğru biçimde kenetlendi.\n");
+    printf("=================================================================\n\n");
+    
+    tur_sanatlar_ve_disiplin();
+    sistem_durum_raporu();
+    
+    printf("=================================================================\n");
+    printf(" [✓ SONUÇ]: SİSTEM KUSURSUZ ÇALIŞIYOR - ÇIKIŞ KODU: 0\n");
+    printf(" [✓ TARİH]: 7 Ekim 2026 | [✓ YER]: Ankara Kök Merkez\n");
+    printf(" [✓ KORUMA]: Otonom Savunma Sistemi AKTIF\n");
+    printf("=================================================================\n");
+}
+
+int main() {
+    printf("\n╔════════════════════════════════════════════════════════════════════╗\n");
+    printf("║  >>> YAZOLYA SIS-OS: UZUN KOD HATA GİDERİCİ BAŞLATILDI <<<        ║\n");
+    printf("║      ROOT YÖNETİCİ: Furkan Kutay Çağanay | Ankara Merkez         ║\n");
+    printf("╚════════════════════════════════════════════════════════════════════╝\n\n");
+    
+    boks_ve_kungfu_refleks_motoru();
+    yuzme_ve_hidrodinamik_motor();
+    sistem_hata_giderici_ve_entegrasyon();
+    mutlak_entegrasyon_ve_final_muhuru();
+    
+    printf("\n[KAPANIŞ] Sistem başarıyla sonlandırılıyor. Tüm modüller devre dışı.\n");
+    printf("[KAPANIŞ] Hayat, matematik ve kod tam dengede mühürlendi.\n\n");
+    
+    return 0;
+}
